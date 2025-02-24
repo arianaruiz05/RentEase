@@ -36,6 +36,17 @@ Examples of unacceptable behavior include:
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
+## Rules
+* No distracted use of technology (e.g. phones away) during all team meetings.
+* Decisions will be made by majority vote. 
+* Attendance is required. If you can not make it to class, please let the group know (communicate in the groupchat). 
+* Assignments will be divided equally. They must completed on time.
+* Constant communication through the groupchat is necessary.
+* Meeting Times: (If needed) we will meet on zoom on Tuesdays.
+* A shared Google Document will hold all of our notes.
+* Communicate with the group if a task can not be done on time.
+* Feedback will be given during class times.
+
 ## Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of
