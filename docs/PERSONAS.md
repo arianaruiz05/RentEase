@@ -6,7 +6,7 @@
 
 
 
-## (Name) - Out-of-State Studnet Persona 
+## (Name) - Out-of-State Student Persona 
 
 
 
