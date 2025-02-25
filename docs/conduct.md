@@ -143,4 +143,4 @@ For answers to common questions about this code of conduct, see the FAQ at
 [translations]: https://www.contributor-covenant.org/translations
 
 ![alt text](https://drive.google.com/file/d/1OlzVkQkkph-oRUugT0jsEq80N-nBMjX4/view?usp=sharing)
-
+Kate Ciulla
