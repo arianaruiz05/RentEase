@@ -142,5 +142,5 @@ For answers to common questions about this code of conduct, see the FAQ at
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
 
-![alt text](https://drive.google.com/file/d/1QEMvt9IEIPZu7PTb8gI1DkD6WrY4y3XY/view?usp=sharing)
+![alt text](https://drive.google.com/file/d/1OlzVkQkkph-oRUugT0jsEq80N-nBMjX4/view?usp=sharing)
 
