@@ -12,7 +12,7 @@
 
 
 ## Natalia - Struggles with Technology/Navigating the web Persona
-https://docs.google.com/presentation/d/17m8cUb03HgmW5lsjMRDseGd_tg9RInKdo1rfCIBE32k/edit?usp=sharing
+[Low Tech Skills](https://docs.google.com/presentation/d/17m8cUb03HgmW5lsjMRDseGd_tg9RInKdo1rfCIBE32k/edit?usp=sharing)
 
 
 
