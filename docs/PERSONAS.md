@@ -1,7 +1,6 @@
 # Rent Ease Persona Grids
 
 ## Mike - Instate Student Persona
-
 [Instate Students](https://docs.google.com/presentation/d/1dUMROrEYTtn6iDkEU4aAGihwEacDuJLJ87lCamvTtQY/edit?usp=sharing)
 
 
@@ -16,5 +15,5 @@
 
 
 
-
-## (Name) - International Student Persona
+## Tayo - International Student Persona
+[International Student](https://docs.google.com/presentation/d/1fcXuchNPT_pf6UKGj1nOuDWM-THtRbNluGb9usKGo74/edit?usp=sharing)
