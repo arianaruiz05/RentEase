@@ -144,3 +144,5 @@ For answers to common questions about this code of conduct, see the FAQ at
 
 <img src="https://github.com/arianaruiz05/RentEase/blob/main/docs/IMG_2151.png" alt="Simeon Larinde" width="300" height="200">
 Kate Ciulla
+Luke Jones
+
