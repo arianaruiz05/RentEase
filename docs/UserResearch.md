@@ -11,9 +11,9 @@ This survey gathered insights from URI students about their experiences with off
 
 
 ## Observation 2:
-* Observation Statement:
-* Supporting Data:
-* Team Action(if any):
+* Observation Statement: The biggest challenge for finding off-campus housing is finding reliable and affordable listings.
+* Supporting Data: 73.4% of people voted that it was the biggest challenge with the next highest at 46.9% being finding a roommate with compatible habits and lifestyles. there was a 26.5% difference between the two highest challenges. 
+* Team Action(if any): We are going to add a feature to verify listings and adding price comparisons between listings.
 
 
 ## Observation 3:
