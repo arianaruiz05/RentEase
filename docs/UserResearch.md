@@ -28,4 +28,6 @@ This survey gathered insights from URI students about their experiences with off
   - Survey responses indicate that students struggle with finding reliable listings and communicating with landlords.
   - There is no data on landlords' perspectives, such as pricing preferences, lease terms, or listing challenges.
   - A successful rental platform must cater to both students seeking housing and landlords listing properties to ensure a seamless experience.
-* Team Action(if any): Develop a landlord-specific survey to gather insights on their rental process, pain points and challenges, and epectationa.
+* Team Action(if any):
+  - Develop a landlord-specific survey to gather insights on their rental process, pain points and challenges, and expectations.
+  - Create a persona to identify their demographic, needs and possible solutions
