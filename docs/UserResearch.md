@@ -19,8 +19,8 @@ This survey gathered insights from URI students about their experiences with off
 ## Observation 3:
 * Observation Statement: Based on survey feedback, most students do not actively search for off-campus housing through websites or apps. Instead, they primarily rely on word of mouth to learn about housing options.
 * Supporting Data:
-    ** 78.1% of respondents find off-campus housing or roommates through word of mouth.
-    ** 92.2% have never used an app to search for off-campus housing.
+    *78.1% of respondents find off-campus housing or roommates through word of mouth.
+    *92.2% have never used an app to search for off-campus housing.
 * Team Action(if any):
 
 
