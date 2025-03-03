@@ -23,6 +23,9 @@ This survey gathered insights from URI students about their experiences with off
 
 
 ## Observation 4:
-* Observation Statement:
+* Observation Statement: Our current research and survey focus solely on students looking for housing, but we have identified a second key user group: landlords and property owners who list rentals. To build a balanced platform, we need insights from landlords to understand their needs, challenges, and expectations when listing properties.
 * Supporting Data:
-* Team Action(if any):
+  - Survey responses indicate that students struggle with finding reliable listings and communicating with landlords.
+  - There is no data on landlords' perspectives, such as pricing preferences, lease terms, or listing challenges.
+  - A successful rental platform must cater to both students seeking housing and landlords listing properties to ensure a seamless experience.
+* Team Action(if any): Develop a landlord-specific survey to gather insights on their rental process, pain points and challenges, and epectationa.
