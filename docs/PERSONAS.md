@@ -18,5 +18,5 @@
 ## Tayo - International Student Persona
 [International Student](https://docs.google.com/presentation/d/1fcXuchNPT_pf6UKGj1nOuDWM-THtRbNluGb9usKGo74/edit?usp=sharing)
 
-## Karen - Landlord
+## Karen - Landlord Persona
 [Landlord](https://docs.google.com/presentation/d/1B15TvJ8tiEERWaQ3IG1UdcbDRR1Mcy17AfFK13aM08U/edit?usp=sharing)
