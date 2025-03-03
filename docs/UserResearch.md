@@ -6,7 +6,7 @@ This survey gathered insights from URI students about their experiences with off
 
 ## Observation 1:
 * Observation Statement: Majority of people would or would consider paying for a premium subscription.
-* Supporting Data: 46/64 said they would consider paying or would pay.
+* Supporting Data: 72% of surveyed people said they would consider paying or would pay.
 * Team Action(if any):
 
 
