@@ -20,6 +20,7 @@ Adoption  - Implement a google analysis on the sign up button to determine the n
 
 ## Metric 6 - Task Success Part 2
 Search to Contact Conversion Rate
+
 Track user interactions using Firebase Analytics. When a user performs a property search and clicks the "Contact" button to reach out to a property owner, these events are logged. The data is stored in the database, allowing us to calculate the conversion rate by dividing the number of contact initiations by the total number of searches.
 
 
