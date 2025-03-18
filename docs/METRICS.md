@@ -12,7 +12,9 @@ Implement survery from FlutterFlow marketplace. This survery will pop up after t
 
 
 ## Metric 3 - Adoption
-Adoption  - Implement a google analysis on the sign up button to determine the number of new users. 
+Registration Rate
+
+When a user successfully signs up for an account (as a new user), this action is logged as an event in Firebase Analytics. The data is stored in the database, allowing us to track the number of users who attempt to sign up and how many successfully complete the process.
 
 ## Metric 4 - Retention
 
