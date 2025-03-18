@@ -9,7 +9,9 @@ NPS (Net Promoter Score)
 Implement survery from FlutterFlow marketplace. This survery will pop up after the user logs in for the 5th time. The user will see this survey on the the general listings page for students/landlords at the end of the Golden Path with data recorded in the database for that user.
 
 ## Metric 2 - Engagement
+Clicks Per Listing
 
+When a user clicks on a property listing to view more details, this event is logged in Firebase Analytics. The data is stored in the database, allowing us to track the number of clicks for each property listing. The click-through rate (CTR) for each listing can be calculated by dividing the number of clicks for that listing by the total number of times that listing was viewed or displayed.
 
 ## Metric 3 - Adoption
 Registration Rate
