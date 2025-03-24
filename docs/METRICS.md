@@ -19,8 +19,13 @@ Registration Rate
 When a user successfully signs up for an account (as a new user), this action is logged as an event in Firebase Analytics. The data is stored in the database, allowing us to track the number of users who attempt to sign up and how many successfully complete the process.
 
 ## Metric 4 - Retention
+7-day Retention Rate (Retention)
 
+To measure how many users return to the app within 7 days of their first login, we will track user activity using Firebase Analytics. When a new user logs in for the first time, an event labeled "first_login" will be recorded in Firebase along with a timestamp. Each time the user logs in after that, another event labeled "user_login" will be logged.
 
+To calculate the 7-day retention rate, we will check how many users who triggered the "first_login" event log in again within 7 days. This data will be stored in Firestore and analyzed by comparing the timestamps of subsequent "user_login" events. The retention rate is determined by dividing the number of users who return within 7 days by the total number of new users in the same period.
+
+By analyzing this metric, we can evaluate user engagement and identify whether improvements are needed in onboarding, feature usefulness, or notification strategies to encourage continued app usage.
 
 ## Metric 5 - Task Success
 Student Paired with Roommate Success
