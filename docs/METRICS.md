@@ -23,7 +23,9 @@ When a user successfully signs up for an account (as a new user), this action is
 
 
 ## Metric 5 - Task Success
+Student Paired with Roommate Success
 
+Checking to see how many students that are looking for roommates find a roommate through our roommate preference survey
 
 ## Metric 6 - Task Success Part 2
 Search to Contact Conversion Rate
