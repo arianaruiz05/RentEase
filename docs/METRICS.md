@@ -28,9 +28,9 @@ To calculate the 7-day retention rate, we will check how many users who triggere
 By analyzing this metric, we can evaluate user engagement and identify whether improvements are needed in onboarding, feature usefulness, or notification strategies to encourage continued app usage.
 
 ## Metric 5 - Task Success
-Landlord Onboarding
+Landlord & Student Onboarding
 
-Percentage of landlords who complete the onboarding flow and reach the property listing screen without assistance or errors.
+Percentage of landlords and students who complete the onboarding and then track the userid who have comepleted onboarding.
 
 ## Metric 6 - Task Success Part 2
 Search to Contact Conversion Rate
