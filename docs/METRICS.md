@@ -28,9 +28,9 @@ To calculate the 7-day retention rate, we will check how many users who triggere
 By analyzing this metric, we can evaluate user engagement and identify whether improvements are needed in onboarding, feature usefulness, or notification strategies to encourage continued app usage.
 
 ## Metric 5 - Task Success
-Student Paired with Roommate Success
+Landlord Onboarding
 
-Checking to see how many students that are looking for roommates find a roommate through our roommate preference survey
+Percentage of landlords who complete the onboarding flow and reach the property listing screen without assistance or errors.
 
 ## Metric 6 - Task Success Part 2
 Search to Contact Conversion Rate
