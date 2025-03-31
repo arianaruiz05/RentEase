@@ -86,7 +86,8 @@ Variations:
 Variation 1 (Control - Current Color): Sign-up page background color is #add8e6 (light blue).
 Variation 2 (Treatment - New Color): Sign-up page background color is #FFFFFF (white).
 
-# A/B Test for Roommate Preferences User Story (US5)
+# A/B Test Guided Preferences Setup vs. Traditional Setup
+User story number: Roommate Preferences User Story (US5) 
 Objective:
 Test two different approaches for the sign-up and preferences setup process to identify which flow maximizes user engagement, minimizes errors, and leads to higher completion rates for roommate account creation.
 
