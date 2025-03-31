@@ -62,3 +62,28 @@ Testing different survey timings ensures optimal user engagement and feedback ac
 
 Design Rationale:
 Shortening onboarding reduces friction, improving retention and engagement by getting users to the app’s core features faster.
+
+# A/B Test Sign-up Background Color impact on Retention 
+User Story Number: US2 (Sign-Up Page Background Color Test)
+
+Metrics:
+
+Retention Rate: Percentage of users returning after 1 and 7 days.
+Signup Completion Rate: Percentage of users who complete the sign-up process.
+Drop-off Rate: Percentage of users who leave during sign-up.
+Engagement Rate: Percentage of users engaging with the app post-signup.
+Hypothesis: Changing the background color of the sign-up page from a colored background (#add8e6) to a clean white background (#FFFFFF) will improve readability and perceived professionalism, leading to higher sign-up completion and user retention.
+
+Problem & Impact:
+The current light blue background (#add8e6) may distract or visually fatigue users during sign-up. A cleaner, white background (#FFFFFF) could provide a more modern and trustworthy aesthetic, potentially reducing friction, improving user perception, and boosting initial engagement and retention.
+
+Experiment:
+
+Audience: First-time users, 50% random split.
+Tracking: Use Firebase A/B Testing to track sign_up_completed, drop_off_point, user_retention (1 and 7 days), time_on_sign_up_page, and signup_page_feedback.
+Variations:
+
+Variation 1 (Control - Current Color): Sign-up page background color is #add8e6 (light blue).
+Variation 2 (Treatment - New Color): Sign-up page background color is #FFFFFF (white).
+
+
