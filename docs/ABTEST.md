@@ -86,4 +86,85 @@ Variations:
 Variation 1 (Control - Current Color): Sign-up page background color is #add8e6 (light blue).
 Variation 2 (Treatment - New Color): Sign-up page background color is #FFFFFF (white).
 
+#A/B Test for Roommate Preferences User Story (US5)
+Objective:
+Test two different approaches for the sign-up and preferences setup process to identify which flow maximizes user engagement, minimizes errors, and leads to higher completion rates for roommate account creation.
 
+Test Group A (Control Group) - Current Flow
+This group will follow the existing process as described in the original user story.
+
+Steps:
+Roommate Account Creation:
+
+Roommates enter a valid email, password, and confirm their details.
+
+After clicking "Create Account," the system creates the account and redirects the user to the preferences setup page.
+
+Roommate Preferences Setup:
+
+Roommates enter their name, contact information, lifestyle preferences, smoking habits, pet preferences, budget, and desired location.
+
+After filling in the details, the user clicks "Save Preferences."
+
+If any required field is missing, an error message is displayed, and preferences cannot be saved until all required fields are completed.
+
+Account Already Exists:
+
+If the user tries to register with an email that's already associated with an existing account, the system displays an error message and prompts the user to log in instead.
+
+Hypothesis for Group A:
+The existing flow is expected to function as intended, but users may be delayed in completing the process if they overlook or forget to fill in the required fields, especially if they receive a single error message at the end.
+
+Test Group B (Variation) - Guided Setup with Progress Indicators
+This group will introduce a more guided approach to preferences setup, with a progress indicator to help users know where they are in the process and improve completion rates.
+
+Steps:
+Roommate Account Creation:
+
+Roommates enter a valid email, password, and confirm their details.
+
+After clicking "Create Account," the system creates the account and immediately redirects them to the preferences setup page.
+
+Roommate Preferences Setup:
+
+Instead of showing all preferences in a single form, the setup page will present the preferences in multiple sections (e.g., "Personal Information," "Lifestyle Preferences," "Budget," "Location").
+
+A progress bar or indicator will show users how far they are in completing the preferences setup (e.g., "Step 2 of 4").
+
+Each section will allow users to fill in and save the information individually, without needing to fill out the entire form at once. This reduces the chances of errors and incomplete submissions.
+
+If a user attempts to save a section with missing required fields (e.g., name, contact information, or budget), the system will show a message like "Please complete all required fields" and prevent moving to the next section until all mandatory fields are filled.
+
+Hypothesis for Group B:
+A guided, step-by-step preferences setup with clear progress indicators will help users feel more confident throughout the process, reducing the chances of missed fields and increasing completion rates. The feedback provided will also ensure users don’t get stuck or frustrated by missing required information.
+
+Metrics to Measure:
+Conversion Rate:
+
+The percentage of users who successfully create an account and complete the preferences setup.
+
+Time to Complete Preferences Setup:
+
+The average time users take to complete the preferences setup, from account creation to saving preferences.
+
+Error Rate:
+
+The number of error messages shown due to missing fields or existing account conflicts.
+
+User Engagement:
+
+The interaction rate with the progress indicator and section-based setup, measuring how users are responding to the guided approach.
+
+User Satisfaction:
+
+A post-completion survey asking users to rate their experience in terms of ease of use, satisfaction, and how helpful the progress indicator was in completing the preferences setup.
+
+A/B Test Process:
+Randomly Assign Users: New users are randomly assigned to either Group A or Group B.
+
+Run the Test for a Set Period: The test will run for a period of 1-2 weeks to gather sufficient data.
+
+Analyze Results: Compare the key metrics (conversion rate, time to complete, error rate, engagement, and satisfaction) between the two groups.
+
+Expected Outcome:
+Group B is expected to show higher completion rates and user satisfaction due to the guided setup and progress tracking, which should reduce user anxiety and help them complete the preferences setup without missing key details.
