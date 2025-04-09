@@ -10,7 +10,7 @@
 
 
 ## US3: Backend Management
-[Test Case - RentEase] (https://docs.google.com/presentation/d/1ZtezrmVTcIsV4F5Z6gsKgLs6MprWzYxOa16wtZIsbZE/edit#slide=id.g34c6055658f_0_0).
+[Test Case - RentEase](https://docs.google.com/presentation/d/1ZtezrmVTcIsV4F5Z6gsKgLs6MprWzYxOa16wtZIsbZE/edit#slide=id.g34c6055658f_0_0).
 
 
 
