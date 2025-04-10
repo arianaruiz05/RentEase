@@ -50,7 +50,7 @@ void main() async {
         find.byKey(const ValueKey('Login-Email_l6a9')), 'arianaruiz@uri.edu');
     await tester.enterText(
         find.byKey(const ValueKey('Login-Password_da90')), 'pass123');
-    await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
+    await tester.tap(find.byKey(const ValueKey('loginButton')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     expect(find.text('Search by location, ZIP code...'), findsWidgets);
   });
