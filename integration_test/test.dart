@@ -52,7 +52,7 @@ void main() async {
         find.byKey(const ValueKey('Login-Password_da90')), 'pass123');
     await tester.tap(find.byKey(const ValueKey('loginButton_xqjb')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    expect(find.text('Search by location, ZIP code...'), findsWidgets);
+    expect(find.byKey(const ValueKey('TextField_63m5')), findsWidgets);
   });
 
   testWidgets('login Fail', (WidgetTester tester) async {
