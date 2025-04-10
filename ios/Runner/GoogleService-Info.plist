@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBKr_ey-7rVb_t02Z6LWRLimvN9WH16M54</string>
+	<key>GCM_SENDER_ID</key>
+	<string>876303566916</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.rentease</string>
+	<key>PROJECT_ID</key>
+	<string>rent-ease-5tgfoq</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rent-ease-5tgfoq.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:876303566916:ios:7a60d7ab4447f184505411</string>
+</dict>
+</plist>

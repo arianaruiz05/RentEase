@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "876303566916",
+    "project_id": "rent-ease-5tgfoq",
+    "storage_bucket": "rent-ease-5tgfoq.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876303566916:android:3a542fef8844c5c6505411",
+        "android_client_info": {
+          "package_name": "com.mycompany.rentease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876303566916-oku201celjjr8hifclvmgela5fm7t2h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiECDp9ec2xLTfjRiT0TF7NT9d1hmFkxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876303566916-oku201celjjr8hifclvmgela5fm7t2h9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.rentease"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
