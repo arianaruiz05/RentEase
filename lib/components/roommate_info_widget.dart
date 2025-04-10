@@ -69,7 +69,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                 children: [
                   Text(
                     'Roommate Preferences',
-                    style: FlutterFlowTheme.of(context).headlineSmall.override(
+                    style: FlutterFlowTheme.of(context).headlineLarge.override(
                           fontFamily: 'Cardo',
                           letterSpacing: 0.0,
                         ),
@@ -84,8 +84,11 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                       color: FlutterFlowTheme.of(context).primaryText,
                       size: 24.0,
                     ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
+                    onPressed: () async {
+                      logFirebaseEvent(
+                          'ROOMMATE_INFO_close_rounded_ICN_ON_TAP');
+                      logFirebaseEvent('IconButton_navigate_back');
+                      context.safePop();
                     },
                   ),
                 ],
@@ -201,7 +204,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Cleanliness Level:',
+                                  'Wake Up:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -210,14 +213,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Very Clean',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.wakeUp, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -226,7 +232,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Study Habits:',
+                                  'Go To Bed:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -235,14 +241,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Night Owl',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.goToBed, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -260,14 +269,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Occasionally Social',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.quietOrSocial, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -276,7 +288,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Sleeping Schedule:',
+                                  'Study Habits:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -285,14 +297,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Late Sleeper (After 12AM)',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.quietSpace, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -301,7 +316,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Noise Tolerance:',
+                                  'Pets:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -310,14 +325,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Moderate Noise OK',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.pets, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -326,7 +344,7 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Guest Policy:',
+                                  'Allergies:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -335,14 +353,17 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Weekends Only',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.allergies, ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -360,14 +381,18 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                 ),
-                                Text(
-                                  'Willing to Share Most Items',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Cardo',
-                                        letterSpacing: 0.0,
-                                      ),
+                                AuthUserStreamWidget(
+                                  builder: (context) => Text(
+                                    valueOrDefault(
+                                        currentUserDocument?.shareOrSeparate,
+                                        ''),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Cardo',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
                                 ),
                               ],
                             ),

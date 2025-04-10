@@ -142,6 +142,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                         text: 'Sign Up',
                                       ),
                                       Tab(
+                                        key: ValueKey('LoginTab_lptw'),
                                         text: 'Login',
                                       ),
                                     ],
@@ -195,6 +196,8 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                   .infinity,
                                                               child:
                                                                   TextFormField(
+                                                                key: ValueKey(
+                                                                    'Signup-Email_8o0v'),
                                                                 controller: _model
                                                                     .signupEmailTextController,
                                                                 focusNode: _model
@@ -350,6 +353,8 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                   .infinity,
                                                               child:
                                                                   TextFormField(
+                                                                key: ValueKey(
+                                                                    'Signup-Password_ytkh'),
                                                                 controller: _model
                                                                     .signupPasswordTextController,
                                                                 focusNode: _model
@@ -489,6 +494,8 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                 double.infinity,
                                                             child:
                                                                 TextFormField(
+                                                              key: ValueKey(
+                                                                  'TextField_cz4m'),
                                                               controller: _model
                                                                   .confirmPasswordTextController0,
                                                               focusNode: _model
@@ -651,6 +658,8 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                   child: Container(
                                                     width: double.infinity,
                                                     child: TextFormField(
+                                                      key: ValueKey(
+                                                          'Login-Email_l6a9'),
                                                       controller: _model
                                                           .loginEmailTextController,
                                                       focusNode: _model
@@ -795,6 +804,8 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                   child: Container(
                                                     width: double.infinity,
                                                     child: TextFormField(
+                                                      key: ValueKey(
+                                                          'Login-Password_da90'),
                                                       controller: _model
                                                           .loginPasswordTextController,
                                                       focusNode: _model
@@ -1110,6 +1121,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                         ),
                       if (_model.tabBarCurrentIndex == 0)
                         FFButtonWidget(
+                          key: ValueKey('signupButton_ycpn'),
                           onPressed: () async {
                             logFirebaseEvent(
                                 'ACCOUNT_LOGIN_SIGNUP_signupButton_ON_TAP');

@@ -80,6 +80,36 @@ class PropertiesRecord extends FirestoreRecord {
   String get numBath => _numBath ?? '';
   bool hasNumBath() => _numBath != null;
 
+  // "email" field.
+  String? _email;
+  String get email => _email ?? '';
+  bool hasEmail() => _email != null;
+
+  // "display_name" field.
+  String? _displayName;
+  String get displayName => _displayName ?? '';
+  bool hasDisplayName() => _displayName != null;
+
+  // "photo_url" field.
+  String? _photoUrl;
+  String get photoUrl => _photoUrl ?? '';
+  bool hasPhotoUrl() => _photoUrl != null;
+
+  // "uid" field.
+  String? _uid;
+  String get uid => _uid ?? '';
+  bool hasUid() => _uid != null;
+
+  // "created_time" field.
+  DateTime? _createdTime;
+  DateTime? get createdTime => _createdTime;
+  bool hasCreatedTime() => _createdTime != null;
+
+  // "phone_number" field.
+  String? _phoneNumber;
+  String get phoneNumber => _phoneNumber ?? '';
+  bool hasPhoneNumber() => _phoneNumber != null;
+
   void _initializeFields() {
     _address = snapshotData['address'] as String?;
     _photos = snapshotData['photos'] as String?;
@@ -94,6 +124,12 @@ class PropertiesRecord extends FirestoreRecord {
     _propertyid = snapshotData['propertyid'] as String?;
     _numBeds = snapshotData['NumBeds'] as String?;
     _numBath = snapshotData['NumBath'] as String?;
+    _email = snapshotData['email'] as String?;
+    _displayName = snapshotData['display_name'] as String?;
+    _photoUrl = snapshotData['photo_url'] as String?;
+    _uid = snapshotData['uid'] as String?;
+    _createdTime = snapshotData['created_time'] as DateTime?;
+    _phoneNumber = snapshotData['phone_number'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -144,6 +180,12 @@ Map<String, dynamic> createPropertiesRecordData({
   String? propertyid,
   String? numBeds,
   String? numBath,
+  String? email,
+  String? displayName,
+  String? photoUrl,
+  String? uid,
+  DateTime? createdTime,
+  String? phoneNumber,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -160,6 +202,12 @@ Map<String, dynamic> createPropertiesRecordData({
       'propertyid': propertyid,
       'NumBeds': numBeds,
       'NumBath': numBath,
+      'email': email,
+      'display_name': displayName,
+      'photo_url': photoUrl,
+      'uid': uid,
+      'created_time': createdTime,
+      'phone_number': phoneNumber,
     }.withoutNulls,
   );
 
@@ -183,7 +231,13 @@ class PropertiesRecordDocumentEquality implements Equality<PropertiesRecord> {
         e1?.available == e2?.available &&
         e1?.propertyid == e2?.propertyid &&
         e1?.numBeds == e2?.numBeds &&
-        e1?.numBath == e2?.numBath;
+        e1?.numBath == e2?.numBath &&
+        e1?.email == e2?.email &&
+        e1?.displayName == e2?.displayName &&
+        e1?.photoUrl == e2?.photoUrl &&
+        e1?.uid == e2?.uid &&
+        e1?.createdTime == e2?.createdTime &&
+        e1?.phoneNumber == e2?.phoneNumber;
   }
 
   @override
@@ -200,7 +254,13 @@ class PropertiesRecordDocumentEquality implements Equality<PropertiesRecord> {
         e?.available,
         e?.propertyid,
         e?.numBeds,
-        e?.numBath
+        e?.numBath,
+        e?.email,
+        e?.displayName,
+        e?.photoUrl,
+        e?.uid,
+        e?.createdTime,
+        e?.phoneNumber
       ]);
 
   @override
