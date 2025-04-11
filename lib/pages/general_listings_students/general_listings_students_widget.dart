@@ -452,7 +452,6 @@ class _GeneralListingsStudentsWidgetState
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         FlutterFlowChoiceChips(
-                                          key: ValueKey('ChoiceChips_2dog'),
                                           options: [
                                             ChipData('All'),
                                             ChipData('New Listings'),
@@ -553,6 +552,7 @@ class _GeneralListingsStudentsWidgetState
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           FlutterFlowIconButton(
+                                            key: ValueKey('IconButton_on1s'),
                                             borderRadius: 8.0,
                                             buttonSize: 40.0,
                                             fillColor:
