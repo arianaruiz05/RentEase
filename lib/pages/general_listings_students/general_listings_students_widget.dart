@@ -540,7 +540,6 @@ class _GeneralListingsStudentsWidgetState
                                             ),
                                       ),
                                       Text(
-                                        key: ValueKey('propertiesText_mjv7'),
                                         'Properties',
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
