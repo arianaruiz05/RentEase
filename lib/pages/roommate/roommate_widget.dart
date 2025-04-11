@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -81,6 +83,12 @@ class _RoommateWidgetState extends State<RoommateWidget> {
                     FFButtonWidget(
                       onPressed: () async {
                         logFirebaseEvent('ROOMMATE_PAGE_YES_BTN_ON_TAP');
+                        logFirebaseEvent('Button_backend_call');
+
+                        await currentUserReference!
+                            .update(createUsersRecordData(
+                          isRoommate: true,
+                        ));
                         logFirebaseEvent('Button_navigate_to');
 
                         context.pushNamed(
@@ -116,6 +124,12 @@ class _RoommateWidgetState extends State<RoommateWidget> {
                     FFButtonWidget(
                       onPressed: () async {
                         logFirebaseEvent('ROOMMATE_PAGE_NO_BTN_ON_TAP');
+                        logFirebaseEvent('Button_backend_call');
+
+                        await currentUserReference!
+                            .update(createUsersRecordData(
+                          isRoommate: false,
+                        ));
                         logFirebaseEvent('Button_navigate_to');
 
                         context.pushNamed(

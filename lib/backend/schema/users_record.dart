@@ -135,6 +135,11 @@ class UsersRecord extends FirestoreRecord {
   String get wakeUp => _wakeUp ?? '';
   bool hasWakeUp() => _wakeUp != null;
 
+  // "IsRoommate" field.
+  bool? _isRoommate;
+  bool get isRoommate => _isRoommate ?? false;
+  bool hasIsRoommate() => _isRoommate != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -160,6 +165,7 @@ class UsersRecord extends FirestoreRecord {
     _quietSpace = snapshotData['quietSpace'] as String?;
     _shareOrSeparate = snapshotData['shareOrSeparate'] as String?;
     _wakeUp = snapshotData['wakeUp'] as String?;
+    _isRoommate = snapshotData['IsRoommate'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -220,6 +226,7 @@ Map<String, dynamic> createUsersRecordData({
   String? quietSpace,
   String? shareOrSeparate,
   String? wakeUp,
+  bool? isRoommate,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -247,6 +254,7 @@ Map<String, dynamic> createUsersRecordData({
       'quietSpace': quietSpace,
       'shareOrSeparate': shareOrSeparate,
       'wakeUp': wakeUp,
+      'IsRoommate': isRoommate,
     }.withoutNulls,
   );
 
@@ -281,7 +289,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.quietOrSocial == e2?.quietOrSocial &&
         e1?.quietSpace == e2?.quietSpace &&
         e1?.shareOrSeparate == e2?.shareOrSeparate &&
-        e1?.wakeUp == e2?.wakeUp;
+        e1?.wakeUp == e2?.wakeUp &&
+        e1?.isRoommate == e2?.isRoommate;
   }
 
   @override
@@ -309,7 +318,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.quietOrSocial,
         e?.quietSpace,
         e?.shareOrSeparate,
-        e?.wakeUp
+        e?.wakeUp,
+        e?.isRoommate
       ]);
 
   @override

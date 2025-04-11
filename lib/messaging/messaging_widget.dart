@@ -367,11 +367,11 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                               ),
                                             ),
                                           );
-                                        }).divide(SizedBox(width: 15.0)),
+                                        }).divide(SizedBox(width: 10.0)),
                                       );
                                     },
                                   ),
-                                ].divide(SizedBox(width: 15.0)),
+                                ].divide(SizedBox(width: 10.0)),
                               ),
                             ),
                           ],
@@ -473,264 +473,313 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 1.0, 0.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  15.0,
-                                                                  0.0,
-                                                                  15.0),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        15.0,
-                                                                        0.0,
-                                                                        15.0,
-                                                                        0.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                if (currentUserReference !=
-                                                                    listViewChatsRecord
-                                                                        .user)
-                                                                  StreamBuilder<
-                                                                      UsersRecord>(
-                                                                    stream: UsersRecord.getDocument(
-                                                                        listViewChatsRecord
-                                                                            .userA!),
-                                                                    builder:
-                                                                        (context,
-                                                                            snapshot) {
-                                                                      // Customize what your widget looks like when it's loading.
-                                                                      if (!snapshot
-                                                                          .hasData) {
-                                                                        return Center(
-                                                                          child:
-                                                                              SizedBox(
-                                                                            width:
-                                                                                50.0,
-                                                                            height:
-                                                                                50.0,
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    logFirebaseEvent(
+                                                        'MESSAGING_PAGE_Row_zw3wk5eo_ON_TAP');
+                                                    logFirebaseEvent(
+                                                        'Row_navigate_to');
+
+                                                    context.pushNamed(
+                                                      ChatsWidget.routeName,
+                                                      queryParameters: {
+                                                        'userName':
+                                                            serializeParam(
+                                                          containerUsersRecord
+                                                              .displayName,
+                                                          ParamType.String,
+                                                        ),
+                                                        'userEmail':
+                                                            serializeParam(
+                                                          containerUsersRecord
+                                                              .email,
+                                                          ParamType.String,
+                                                        ),
+                                                        'chatUser':
+                                                            serializeParam(
+                                                          listViewChatsRecord
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                        'userRef':
+                                                            serializeParam(
+                                                          containerUsersRecord
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                        'userProfile':
+                                                            serializeParam(
+                                                          containerUsersRecord
+                                                              .photoUrl,
+                                                          ParamType.String,
+                                                        ),
+                                                      }.withoutNulls,
+                                                    );
+                                                  },
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    15.0,
+                                                                    0.0,
+                                                                    15.0),
+                                                        child: Column(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          15.0,
+                                                                          0.0,
+                                                                          15.0,
+                                                                          0.0),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  if (currentUserReference !=
+                                                                      listViewChatsRecord
+                                                                          .user)
+                                                                    StreamBuilder<
+                                                                        UsersRecord>(
+                                                                      stream: UsersRecord.getDocument(
+                                                                          listViewChatsRecord
+                                                                              .userA!),
+                                                                      builder:
+                                                                          (context,
+                                                                              snapshot) {
+                                                                        // Customize what your widget looks like when it's loading.
+                                                                        if (!snapshot
+                                                                            .hasData) {
+                                                                          return Center(
                                                                             child:
-                                                                                CircularProgressIndicator(
-                                                                              valueColor: AlwaysStoppedAnimation<Color>(
-                                                                                FlutterFlowTheme.of(context).primary,
+                                                                                SizedBox(
+                                                                              width: 50.0,
+                                                                              height: 50.0,
+                                                                              child: CircularProgressIndicator(
+                                                                                valueColor: AlwaysStoppedAnimation<Color>(
+                                                                                  FlutterFlowTheme.of(context).primary,
+                                                                                ),
                                                                               ),
                                                                             ),
+                                                                          );
+                                                                        }
+
+                                                                        final circleImageUsersRecord =
+                                                                            snapshot.data!;
+
+                                                                        return Container(
+                                                                          width:
+                                                                              48.0,
+                                                                          height:
+                                                                              48.0,
+                                                                          clipBehavior:
+                                                                              Clip.antiAlias,
+                                                                          decoration:
+                                                                              BoxDecoration(
+                                                                            shape:
+                                                                                BoxShape.circle,
+                                                                          ),
+                                                                          child:
+                                                                              Image.network(
+                                                                            circleImageUsersRecord.photoUrl,
+                                                                            fit:
+                                                                                BoxFit.cover,
                                                                           ),
                                                                         );
-                                                                      }
-
-                                                                      final circleImageUsersRecord =
-                                                                          snapshot
-                                                                              .data!;
-
-                                                                      return Container(
-                                                                        width:
-                                                                            48.0,
-                                                                        height:
-                                                                            48.0,
-                                                                        clipBehavior:
-                                                                            Clip.antiAlias,
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          shape:
-                                                                              BoxShape.circle,
-                                                                        ),
-                                                                        child: Image
-                                                                            .network(
-                                                                          circleImageUsersRecord
-                                                                              .photoUrl,
-                                                                          fit: BoxFit
-                                                                              .cover,
-                                                                        ),
-                                                                      );
-                                                                    },
-                                                                  ),
-                                                                if (currentUserReference ==
-                                                                    listViewChatsRecord
-                                                                        .user)
-                                                                  Container(
-                                                                    width: 48.0,
-                                                                    height:
-                                                                        48.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
+                                                                      },
                                                                     ),
-                                                                    child: Image
-                                                                        .network(
+                                                                  if (currentUserReference ==
                                                                       listViewChatsRecord
-                                                                          .image,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    if (currentUserReference !=
+                                                                          .user)
+                                                                    Container(
+                                                                      width:
+                                                                          48.0,
+                                                                      height:
+                                                                          48.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
                                                                         listViewChatsRecord
-                                                                            .user)
-                                                                      StreamBuilder<
-                                                                          UsersRecord>(
-                                                                        stream:
-                                                                            UsersRecord.getDocument(listViewChatsRecord.userA!),
-                                                                        builder:
-                                                                            (context,
-                                                                                snapshot) {
-                                                                          // Customize what your widget looks like when it's loading.
-                                                                          if (!snapshot
-                                                                              .hasData) {
-                                                                            return Center(
-                                                                              child: SizedBox(
-                                                                                width: 50.0,
-                                                                                height: 50.0,
-                                                                                child: CircularProgressIndicator(
-                                                                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                                                                    FlutterFlowTheme.of(context).primary,
+                                                                            .image,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      if (currentUserReference !=
+                                                                          listViewChatsRecord
+                                                                              .user)
+                                                                        StreamBuilder<
+                                                                            UsersRecord>(
+                                                                          stream:
+                                                                              UsersRecord.getDocument(listViewChatsRecord.userA!),
+                                                                          builder:
+                                                                              (context, snapshot) {
+                                                                            // Customize what your widget looks like when it's loading.
+                                                                            if (!snapshot.hasData) {
+                                                                              return Center(
+                                                                                child: SizedBox(
+                                                                                  width: 50.0,
+                                                                                  height: 50.0,
+                                                                                  child: CircularProgressIndicator(
+                                                                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                                                                      FlutterFlowTheme.of(context).primary,
+                                                                                    ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
+                                                                              );
+                                                                            }
+
+                                                                            final textUsersRecord =
+                                                                                snapshot.data!;
+
+                                                                            return Text(
+                                                                              textUsersRecord.displayName,
+                                                                              style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                    fontFamily: 'Cardo',
+                                                                                    fontSize: 16.0,
+                                                                                    letterSpacing: 0.0,
+                                                                                  ),
                                                                             );
-                                                                          }
-
-                                                                          final textUsersRecord =
-                                                                              snapshot.data!;
-
-                                                                          return Text(
-                                                                            textUsersRecord.displayName,
-                                                                            style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                  fontFamily: 'Cardo',
-                                                                                  fontSize: 16.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                ),
-                                                                          );
-                                                                        },
+                                                                          },
+                                                                        ),
+                                                                      if (currentUserReference ==
+                                                                          listViewChatsRecord
+                                                                              .user)
+                                                                        Text(
+                                                                          containerUsersRecord
+                                                                              .displayName,
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyLarge
+                                                                              .override(
+                                                                                fontFamily: 'Cardo',
+                                                                                fontSize: 16.0,
+                                                                                letterSpacing: 0.0,
+                                                                              ),
+                                                                        ),
+                                                                      Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            5.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Text(
+                                                                          listViewChatsRecord
+                                                                              .lastMessage,
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Cardo',
+                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                letterSpacing: 0.0,
+                                                                              ),
+                                                                        ),
                                                                       ),
-                                                                    if (currentUserReference ==
-                                                                        listViewChatsRecord
-                                                                            .user)
-                                                                      Text(
-                                                                        containerUsersRecord
-                                                                            .displayName,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyLarge
-                                                                            .override(
-                                                                              fontFamily: 'Cardo',
-                                                                              fontSize: 16.0,
-                                                                              letterSpacing: 0.0,
-                                                                            ),
-                                                                      ),
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          0.0,
-                                                                          5.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Text(
-                                                                        listViewChatsRecord
-                                                                            .lastMessage,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Cardo',
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              letterSpacing: 0.0,
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ].divide(SizedBox(
-                                                                  width: 15.0)),
+                                                                    ],
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    width:
+                                                                        15.0)),
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  15.0,
-                                                                  0.0),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Text(
-                                                            dateTimeFormat(
-                                                                "jm",
-                                                                listViewChatsRecord
-                                                                    .lastMessageTime!),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodySmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Cardo',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                          ),
-                                                          if (listViewChatsRecord
-                                                              .messageSeen)
-                                                            Icon(
-                                                              Icons.done_all,
-                                                              color: FlutterFlowTheme
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    0.0,
+                                                                    15.0,
+                                                                    0.0),
+                                                        child: Column(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Text(
+                                                              dateTimeFormat(
+                                                                  "jm",
+                                                                  listViewChatsRecord
+                                                                      .lastMessageTime!),
+                                                              style: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .accent1,
-                                                              size: 16.0,
+                                                                  .bodySmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Cardo',
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
                                                             ),
-                                                          if (!listViewChatsRecord
-                                                              .messageSeen)
-                                                            Icon(
-                                                              Icons.done_all,
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .secondary,
-                                                              size: 16.0,
-                                                            ),
-                                                        ],
+                                                            if (listViewChatsRecord
+                                                                .messageSeen)
+                                                              Icon(
+                                                                Icons.done_all,
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .accent1,
+                                                                size: 16.0,
+                                                              ),
+                                                            if (!listViewChatsRecord
+                                                                .messageSeen)
+                                                              Icon(
+                                                                Icons.done_all,
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondary,
+                                                                size: 16.0,
+                                                              ),
+                                                          ],
+                                                        ),
                                                       ),
-                                                    ),
-                                                  ],
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),

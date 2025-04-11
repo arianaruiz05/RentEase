@@ -78,14 +78,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? entryPage ?? GeneralListingsLandlordsWidget()
-          : AccountLoginSignupWidget(),
+          : MessagingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? entryPage ?? GeneralListingsLandlordsWidget()
-              : AccountLoginSignupWidget(),
+              : MessagingWidget(),
         ),
         FFRoute(
           name: UserTypeWidget.routeName,
@@ -371,7 +371,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/accountLoginSignup';
+            return '/messaging';
           }
           return null;
         },

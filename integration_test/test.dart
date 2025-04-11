@@ -38,11 +38,14 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: const MyApp(),
+      child: MyApp(
+        entryPage: AccountLoginSignupWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.tap(find.byKey(const ValueKey('TabBar_ae9j')));
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
@@ -128,6 +131,7 @@ void main() async {
         find.byKey(const ValueKey('TextField_cz4m')), '1234567');
     await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    expect(find.byKey(const ValueKey('loginButton_xqjb')), findsNothing);
   });
 }
 
