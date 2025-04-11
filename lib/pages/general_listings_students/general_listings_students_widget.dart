@@ -179,184 +179,156 @@ class _GeneralListingsStudentsWidgetState
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 0.0, 4.0, 0.0),
-                                                child: Container(
-                                                  key: ValueKey(
-                                                      'TextField_63m5'),
-                                                  child: Autocomplete<String>(
-                                                    initialValue:
-                                                        TextEditingValue(),
-                                                    optionsBuilder:
-                                                        (textEditingValue) {
-                                                      if (textEditingValue
-                                                              .text ==
-                                                          '') {
-                                                        return const Iterable<
-                                                            String>.empty();
-                                                      }
-                                                      return ['Option 1']
-                                                          .where((option) {
-                                                        final lowercaseOption =
-                                                            option
-                                                                .toLowerCase();
-                                                        return lowercaseOption
-                                                            .contains(
-                                                                textEditingValue
-                                                                    .text
-                                                                    .toLowerCase());
-                                                      });
-                                                    },
-                                                    optionsViewBuilder:
-                                                        (context, onSelected,
-                                                            options) {
-                                                      return AutocompleteOptionsList(
-                                                        textFieldKey:
-                                                            _model.textFieldKey,
-                                                        textController: _model
-                                                            .textController!,
-                                                        options:
-                                                            options.toList(),
-                                                        onSelected: onSelected,
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Cardo',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        textHighlightStyle:
-                                                            TextStyle(),
-                                                        elevation: 4.0,
-                                                        optionBackgroundColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryBackground,
-                                                        optionHighlightColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .secondaryBackground,
-                                                        maxHeight: 200.0,
-                                                      );
-                                                    },
-                                                    onSelected:
-                                                        (String selection) {
-                                                      safeSetState(() => _model
-                                                              .textFieldSelectedOption =
-                                                          selection);
-                                                      FocusScope.of(context)
-                                                          .unfocus();
-                                                    },
-                                                    fieldViewBuilder: (
-                                                      context,
-                                                      textEditingController,
-                                                      focusNode,
-                                                      onEditingComplete,
-                                                    ) {
-                                                      _model.textFieldFocusNode =
-                                                          focusNode;
+                                                child: Autocomplete<String>(
+                                                  initialValue:
+                                                      TextEditingValue(),
+                                                  optionsBuilder:
+                                                      (textEditingValue) {
+                                                    if (textEditingValue.text ==
+                                                        '') {
+                                                      return const Iterable<
+                                                          String>.empty();
+                                                    }
+                                                    return ['Option 1']
+                                                        .where((option) {
+                                                      final lowercaseOption =
+                                                          option.toLowerCase();
+                                                      return lowercaseOption
+                                                          .contains(
+                                                              textEditingValue
+                                                                  .text
+                                                                  .toLowerCase());
+                                                    });
+                                                  },
+                                                  optionsViewBuilder: (context,
+                                                      onSelected, options) {
+                                                    return AutocompleteOptionsList(
+                                                      textFieldKey:
+                                                          _model.textFieldKey,
+                                                      textController: _model
+                                                          .textController!,
+                                                      options: options.toList(),
+                                                      onSelected: onSelected,
+                                                      textStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Cardo',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
+                                                      textHighlightStyle:
+                                                          TextStyle(),
+                                                      elevation: 4.0,
+                                                      optionBackgroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryBackground,
+                                                      optionHighlightColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryBackground,
+                                                      maxHeight: 200.0,
+                                                    );
+                                                  },
+                                                  onSelected:
+                                                      (String selection) {
+                                                    safeSetState(() => _model
+                                                            .textFieldSelectedOption =
+                                                        selection);
+                                                    FocusScope.of(context)
+                                                        .unfocus();
+                                                  },
+                                                  fieldViewBuilder: (
+                                                    context,
+                                                    textEditingController,
+                                                    focusNode,
+                                                    onEditingComplete,
+                                                  ) {
+                                                    _model.textFieldFocusNode =
+                                                        focusNode;
 
-                                                      _model.textController =
-                                                          textEditingController;
-                                                      return TextFormField(
-                                                        key:
-                                                            _model.textFieldKey,
-                                                        controller:
-                                                            textEditingController,
-                                                        focusNode: focusNode,
-                                                        onEditingComplete:
-                                                            onEditingComplete,
-                                                        onChanged: (_) =>
-                                                            EasyDebounce
-                                                                .debounce(
-                                                          '_model.textController',
-                                                          Duration(
-                                                              milliseconds:
-                                                                  2000),
-                                                          () async {
-                                                            logFirebaseEvent(
-                                                                'GENERAL_LISTINGS_STUDENTS_TextField_93k8');
-                                                            logFirebaseEvent(
-                                                                'TextField_simple_search');
-                                                            safeSetState(() {
-                                                              _model.simpleSearchResults =
-                                                                  TextSearch(
-                                                                generalListingsStudentsPropertiesRecordList
-                                                                    .map(
-                                                                      (record) =>
-                                                                          TextSearchItem.fromTerms(
-                                                                              record,
-                                                                              [
-                                                                            record.address,
-                                                                            record.propertyDetails
-                                                                          ]),
-                                                                    )
-                                                                    .toList(),
-                                                              )
-                                                                      .search(_model
-                                                                          .textController
-                                                                          .text)
-                                                                      .map((r) =>
-                                                                          r.object)
-                                                                      .toList();
-                                                              ;
-                                                            });
-                                                            logFirebaseEvent(
-                                                                'TextField_update_app_state');
-                                                            FFAppState()
-                                                                    .searchActive =
-                                                                true;
-                                                            FFAppState()
-                                                                    .searchCount =
+                                                    _model.textController =
+                                                        textEditingController;
+                                                    return TextFormField(
+                                                      key: _model.textFieldKey,
+                                                      controller:
+                                                          textEditingController,
+                                                      focusNode: focusNode,
+                                                      onEditingComplete:
+                                                          onEditingComplete,
+                                                      onChanged: (_) =>
+                                                          EasyDebounce.debounce(
+                                                        '_model.textController',
+                                                        Duration(
+                                                            milliseconds: 2000),
+                                                        () async {
+                                                          logFirebaseEvent(
+                                                              'GENERAL_LISTINGS_STUDENTS_TextField_93k8');
+                                                          logFirebaseEvent(
+                                                              'TextField_simple_search');
+                                                          safeSetState(() {
+                                                            _model.simpleSearchResults =
+                                                                TextSearch(
+                                                              generalListingsStudentsPropertiesRecordList
+                                                                  .map(
+                                                                    (record) =>
+                                                                        TextSearchItem.fromTerms(
+                                                                            record,
+                                                                            [
+                                                                          record
+                                                                              .address,
+                                                                          record
+                                                                              .propertyDetails
+                                                                        ]),
+                                                                  )
+                                                                  .toList(),
+                                                            )
+                                                                    .search(_model
+                                                                        .textController
+                                                                        .text)
+                                                                    .map((r) =>
+                                                                        r.object)
+                                                                    .toList();
+                                                            ;
+                                                          });
+                                                          logFirebaseEvent(
+                                                              'TextField_update_app_state');
+                                                          FFAppState()
+                                                                  .searchActive =
+                                                              true;
+                                                          FFAppState()
+                                                                  .searchCount =
+                                                              FFAppState()
+                                                                      .searchCount +
+                                                                  1;
+                                                          safeSetState(() {});
+                                                          logFirebaseEvent(
+                                                              'TextField_backend_call');
+
+                                                          await SearchToContactRecord
+                                                                  .createDoc(
+                                                                      currentUserReference!)
+                                                              .set(
+                                                                  createSearchToContactRecordData(
+                                                            searchCount:
                                                                 FFAppState()
-                                                                        .searchCount +
-                                                                    1;
-                                                            safeSetState(() {});
-                                                            logFirebaseEvent(
-                                                                'TextField_backend_call');
-
-                                                            await SearchToContactRecord
-                                                                    .createDoc(
-                                                                        currentUserReference!)
-                                                                .set(
-                                                                    createSearchToContactRecordData(
-                                                              searchCount:
-                                                                  FFAppState()
-                                                                      .searchCount,
-                                                            ));
-                                                            logFirebaseEvent(
-                                                                'TextField_google_analytics_event');
-                                                            logFirebaseEvent(
-                                                                '');
-                                                          },
-                                                        ),
-                                                        autofocus: true,
-                                                        obscureText: false,
-                                                        decoration:
-                                                            InputDecoration(
-                                                          hintText:
-                                                              'Search by location, ZIP code...',
-                                                          hintStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Cardo',
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                  ),
-                                                          enabledBorder:
-                                                              InputBorder.none,
-                                                          focusedBorder:
-                                                              InputBorder.none,
-                                                          errorBorder:
-                                                              InputBorder.none,
-                                                          focusedErrorBorder:
-                                                              InputBorder.none,
-                                                        ),
-                                                        style:
+                                                                    .searchCount,
+                                                          ));
+                                                          logFirebaseEvent(
+                                                              'TextField_google_analytics_event');
+                                                          logFirebaseEvent('');
+                                                        },
+                                                      ),
+                                                      autofocus: true,
+                                                      obscureText: false,
+                                                      decoration:
+                                                          InputDecoration(
+                                                        hintText:
+                                                            'Search by location, ZIP code...',
+                                                        hintStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .bodyMedium
@@ -366,13 +338,27 @@ class _GeneralListingsStudentsWidgetState
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
-                                                        validator: _model
-                                                            .textControllerValidator
-                                                            .asValidator(
-                                                                context),
-                                                      );
-                                                    },
-                                                  ),
+                                                        enabledBorder:
+                                                            InputBorder.none,
+                                                        focusedBorder:
+                                                            InputBorder.none,
+                                                        errorBorder:
+                                                            InputBorder.none,
+                                                        focusedErrorBorder:
+                                                            InputBorder.none,
+                                                      ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily: 'Cardo',
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                      validator: _model
+                                                          .textControllerValidator
+                                                          .asValidator(context),
+                                                    );
+                                                  },
                                                 ),
                                               ),
                                             ),
@@ -466,6 +452,7 @@ class _GeneralListingsStudentsWidgetState
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         FlutterFlowChoiceChips(
+                                          key: ValueKey('ChoiceChips_2dog'),
                                           options: [
                                             ChipData('All'),
                                             ChipData('New Listings'),
