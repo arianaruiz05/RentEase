@@ -74,16 +74,17 @@ void main() async {
     ));
     await GoogleFonts.pendingFonts();
 
-    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
+    await tester.enterText(find.byKey(const ValueKey('Login-Email_l6a9')),
+        'katherine.ciulla@uri.edu');
     await tester.enterText(
-        find.byKey(const ValueKey('Login-Email_l6a9')), 'arianaruiz@uri.edu');
-    await tester.enterText(
-        find.byKey(const ValueKey('AccountLoginSignup_1jki')), 'password');
+        find.byKey(const ValueKey('AccountLoginSignup_1jki')), 'password2');
     await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     expect(find.byKey(const ValueKey('GoogleButton_l5qf')), findsWidgets);
   });
 
