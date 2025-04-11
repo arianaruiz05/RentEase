@@ -1016,6 +1016,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 30.0, 0.0),
                             child: FFButtonWidget(
+                              key: ValueKey('GoogleButton_l5qf'),
                               onPressed: () async {
                                 logFirebaseEvent(
                                     'ACCOUNT_LOGIN_SIGNUP_GoogleButton_ON_TAP');

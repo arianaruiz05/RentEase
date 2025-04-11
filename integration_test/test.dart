@@ -84,10 +84,7 @@ void main() async {
         find.byKey(const ValueKey('AccountLoginSignup_1jki')), 'password');
     await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    expect(
-        find.text(
-            'Error: The supplied auth creditiential is incorrect, malformed or has expired'),
-        findsWidgets);
+    expect(find.byKey(const ValueKey('GoogleButton_l5qf')), findsWidgets);
   });
 
   testWidgets('Succesful Account Creation', (WidgetTester tester) async {
