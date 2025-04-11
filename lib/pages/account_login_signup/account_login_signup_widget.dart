@@ -1152,70 +1152,74 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                             ),
                           ),
                         if (_model.tabBarCurrentIndex == 1)
-                          FFButtonWidget(
-                            key: ValueKey('loginButton_xqjb'),
-                            onPressed: () async {
-                              logFirebaseEvent(
-                                  'ACCOUNT_LOGIN_SIGNUP_loginButton_ON_TAP');
-                              logFirebaseEvent('loginButton_auth');
-                              GoRouter.of(context).prepareAuthEvent();
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 300.0),
+                            child: FFButtonWidget(
+                              key: ValueKey('loginButton_xqjb'),
+                              onPressed: () async {
+                                logFirebaseEvent(
+                                    'ACCOUNT_LOGIN_SIGNUP_loginButton_ON_TAP');
+                                logFirebaseEvent('loginButton_auth');
+                                GoRouter.of(context).prepareAuthEvent();
 
-                              final user = await authManager.signInWithEmail(
-                                context,
-                                _model.loginEmailTextController.text,
-                                _model.loginPasswordTextController.text,
-                              );
-                              if (user == null) {
-                                return;
-                              }
+                                final user = await authManager.signInWithEmail(
+                                  context,
+                                  _model.loginEmailTextController.text,
+                                  _model.loginPasswordTextController.text,
+                                );
+                                if (user == null) {
+                                  return;
+                                }
 
-                              logFirebaseEvent('loginButton_backend_call');
+                                logFirebaseEvent('loginButton_backend_call');
 
-                              await currentUserReference!.update({
-                                ...mapToFirestore(
-                                  {
-                                    'UserLoginCount': FieldValue.increment(1),
-                                  },
-                                ),
-                              });
-                              if (valueOrDefault<bool>(
-                                  currentUserDocument?.isStudent, false)) {
-                                logFirebaseEvent('loginButton_navigate_to');
-
-                                context.pushNamedAuth(
-                                    GeneralListingsStudentsWidget.routeName,
-                                    context.mounted);
-                              } else {
-                                logFirebaseEvent('loginButton_navigate_to');
-
-                                context.pushNamedAuth(
-                                    GeneralListingsLandlordsWidget.routeName,
-                                    context.mounted);
-                              }
-
-                              logFirebaseEvent(
-                                  'loginButton_google_analytics_event');
-                              logFirebaseEvent('');
-                            },
-                            text: 'Log in',
-                            options: FFButtonOptions(
-                              width: double.infinity,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .override(
-                                    fontFamily: 'Cardo',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    letterSpacing: 0.0,
+                                await currentUserReference!.update({
+                                  ...mapToFirestore(
+                                    {
+                                      'UserLoginCount': FieldValue.increment(1),
+                                    },
                                   ),
-                              elevation: 0.0,
-                              borderRadius: BorderRadius.circular(8.0),
+                                });
+                                if (valueOrDefault<bool>(
+                                    currentUserDocument?.isStudent, false)) {
+                                  logFirebaseEvent('loginButton_navigate_to');
+
+                                  context.pushNamedAuth(
+                                      GeneralListingsStudentsWidget.routeName,
+                                      context.mounted);
+                                } else {
+                                  logFirebaseEvent('loginButton_navigate_to');
+
+                                  context.pushNamedAuth(
+                                      GeneralListingsLandlordsWidget.routeName,
+                                      context.mounted);
+                                }
+
+                                logFirebaseEvent(
+                                    'loginButton_google_analytics_event');
+                                logFirebaseEvent('');
+                              },
+                              text: 'Log in',
+                              options: FFButtonOptions(
+                                width: double.infinity,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).primary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .override(
+                                      fontFamily: 'Cardo',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      letterSpacing: 0.0,
+                                    ),
+                                elevation: 0.0,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             ),
                           ),
                       ],
