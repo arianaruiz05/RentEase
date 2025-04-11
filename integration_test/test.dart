@@ -61,7 +61,7 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('loginButton_xqjb')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    expect(find.byKey(const ValueKey('IconButton_on1s')), findsWidgets);
+    expect(find.text('Properties'), findsWidgets);
   });
 
   testWidgets('login Fail', (WidgetTester tester) async {
@@ -81,8 +81,8 @@ void main() async {
     await tester.enterText(find.byKey(const ValueKey('Login-Email_l6a9')),
         'katherine.ciulla@uri.edu');
     await tester.enterText(
-        find.byKey(const ValueKey('Login-Password_da90')), 'password2');
-    await tester.tap(find.byKey(const ValueKey('loginButton_xqjb')));
+        find.byKey(const ValueKey('AccountLoginSignup_1jki')), 'password2');
+    await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     expect(find.text('Sign up with Google or Facebook'), findsWidgets);
   });
