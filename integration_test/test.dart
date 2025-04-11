@@ -45,7 +45,6 @@ void main() async {
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    await tester.tap(find.byKey(const ValueKey('TabBar_ae9j')));
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));

@@ -120,7 +120,6 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                   Align(
                                     alignment: Alignment(0.0, 0),
                                     child: TabBar(
-                                      key: ValueKey('TabBar_ae9j'),
                                       labelColor: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       unselectedLabelColor:
