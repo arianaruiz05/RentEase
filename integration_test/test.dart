@@ -38,9 +38,7 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: MyApp(
-        entryPage: AccountLoginSignupWidget(),
-      ),
+      child: const MyApp(),
     ));
     await GoogleFonts.pendingFonts();
 
@@ -49,8 +47,12 @@ void main() async {
     await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.tap(find.byKey(const ValueKey('Login-Email_l6a9')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.enterText(
         find.byKey(const ValueKey('Login-Email_l6a9')), 'arianaruiz@uri.edu');
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
+    await tester.tap(find.byKey(const ValueKey('Login-Password_da90')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.enterText(
         find.byKey(const ValueKey('Login-Password_da90')), 'pass123');
