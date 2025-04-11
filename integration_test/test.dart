@@ -77,12 +77,11 @@ void main() async {
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     await tester.enterText(find.byKey(const ValueKey('Login-Email_l6a9')),
         'katherine.ciulla@uri.edu');
     await tester.enterText(
-        find.byKey(const ValueKey('AccountLoginSignup_1jki')), 'password2');
-    await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
+        find.byKey(const ValueKey('Login-Password_da90')), 'password2');
+    await tester.tap(find.byKey(const ValueKey('loginButton_xqjb')));
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     expect(find.text('Sign up with Google or Facebook'), findsWidgets);
   });
