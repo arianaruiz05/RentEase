@@ -1028,7 +1028,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                 }
 
                                 context.goNamedAuth(
-                                    GeneralListingsLandlordsWidget.routeName,
+                                    GeneralListingsStudentsWidget.routeName,
                                     context.mounted);
                               },
                               text: '',
