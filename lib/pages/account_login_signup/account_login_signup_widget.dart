@@ -1119,7 +1119,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                           },
                           text: 'Sign up',
                           options: FFButtonOptions(
-                            width: 150.0,
+                            width: double.infinity,
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
@@ -1188,7 +1188,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                             },
                             text: 'Log in',
                             options: FFButtonOptions(
-                              width: 150.0,
+                              width: double.infinity,
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
