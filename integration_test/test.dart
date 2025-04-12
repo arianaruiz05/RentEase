@@ -69,7 +69,9 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: const MyApp(),
+      child: MyApp(
+        entryPage: AccountLoginSignupWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
