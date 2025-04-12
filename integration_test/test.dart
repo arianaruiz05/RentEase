@@ -75,8 +75,6 @@ void main() async {
 
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
-    await tester.pump(kDoubleTapMinTime);
-    await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.enterText(find.byKey(const ValueKey('Login-Email_l6a9')),
         'katherine.ciulla@uri.edu');
     await tester.enterText(
