@@ -74,6 +74,9 @@ void main() async {
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
+    await tester.tap(find.byKey(const ValueKey('TabBar_ae9j')));
+    await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
+    await tester.pump(kDoubleTapMinTime);
     await tester.tap(find.byKey(const ValueKey('LoginTab_lptw')));
     await tester.enterText(find.byKey(const ValueKey('Login-Email_l6a9')),
         'katherine.ciulla@uri.edu');
@@ -81,7 +84,7 @@ void main() async {
         find.byKey(const ValueKey('Login-Password_da90')), 'password2');
     await tester.tap(find.byKey(const ValueKey('loginButton_xqjb')));
     await tester.pumpAndSettle(const Duration(milliseconds: 10000));
-    expect(find.text('Sign up with Google or Facebook'), findsWidgets);
+    expect(find.text('Sign up with Google or Facebook'), findsOneWidget);
   });
 
   testWidgets('Succesful Account Creation', (WidgetTester tester) async {
