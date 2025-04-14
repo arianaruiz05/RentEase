@@ -31,10 +31,54 @@
               "client_type": 3
             },
             {
-              "client_id": "876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc.apps.googleusercontent.com",
+              "client_id": "876303566916-834l171enpqqnicplinm81mi4bvlnrio.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.mycompany.rentease"
+                "bundle_id": "com.uricsc305.rentease"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876303566916:android:17bc86cb5a7ed368505411",
+        "android_client_info": {
+          "package_name": "com.uricsc305.rentease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876303566916-ovd5978p62n7b37t3anp04qtedue07pd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uricsc305.rentease",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "876303566916-oku201celjjr8hifclvmgela5fm7t2h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiECDp9ec2xLTfjRiT0TF7NT9d1hmFkxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876303566916-oku201celjjr8hifclvmgela5fm7t2h9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "876303566916-834l171enpqqnicplinm81mi4bvlnrio.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.uricsc305.rentease"
               }
             }
           ]

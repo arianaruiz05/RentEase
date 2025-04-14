@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -109,15 +108,13 @@ class _LandlordInfoWidgetState extends State<LandlordInfoWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           size: 20.0,
                         ),
-                        AuthUserStreamWidget(
-                          builder: (context) => Text(
-                            currentUserDisplayName,
-                            style:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Cardo',
-                                      letterSpacing: 0.0,
-                                    ),
-                          ),
+                        Text(
+                          'Stephen',
+                          style:
+                              FlutterFlowTheme.of(context).bodyLarge.override(
+                                    fontFamily: 'Cardo',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ].divide(SizedBox(width: 8.0)),
                     ),
@@ -148,7 +145,7 @@ class _LandlordInfoWidgetState extends State<LandlordInfoWidget> {
                           size: 20.0,
                         ),
                         Text(
-                          currentUserEmail,
+                          'stephen@email.com',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Cardo',

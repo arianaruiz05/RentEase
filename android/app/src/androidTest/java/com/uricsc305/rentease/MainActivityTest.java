@@ -1,4 +1,4 @@
-package com.mycompany.rentease;
+package com.uricsc305.rentease;
 
 import androidx.test.rule.ActivityTestRule;
 import dev.flutter.plugins.integration_test.FlutterTestRunner;

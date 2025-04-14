@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc.apps.googleusercontent.com</string>
+	<string>876303566916-834l171enpqqnicplinm81mi4bvlnrio.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.876303566916-9m757dsu83g6vaasis0eqqj4dffl8cjc</string>
+	<string>com.googleusercontent.apps.876303566916-834l171enpqqnicplinm81mi4bvlnrio</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>876303566916-ovd5978p62n7b37t3anp04qtedue07pd.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBKr_ey-7rVb_t02Z6LWRLimvN9WH16M54</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mycompany.rentease</string>
+	<string>com.uricsc305.rentease</string>
 	<key>PROJECT_ID</key>
 	<string>rent-ease-5tgfoq</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:876303566916:ios:7a60d7ab4447f184505411</string>
+	<string>1:876303566916:ios:62ad93a74f8ed1c5505411</string>
 </dict>
 </plist>

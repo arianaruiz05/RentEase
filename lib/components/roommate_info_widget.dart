@@ -355,8 +355,11 @@ class _RoommateInfoWidgetState extends State<RoommateInfoWidget> {
                                 ),
                                 AuthUserStreamWidget(
                                   builder: (context) => Text(
-                                    valueOrDefault(
-                                        currentUserDocument?.allergies, ''),
+                                    valueOrDefault<String>(
+                                      valueOrDefault(
+                                          currentUserDocument?.allergies, ''),
+                                      'No',
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

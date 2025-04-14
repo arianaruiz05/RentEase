@@ -109,9 +109,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              wakeUp: 'Early',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              wakeUp: valueOrDefault(
+                                  currentUserDocument?.wakeUp, ''),
                             ));
                           },
                           child: Container(
@@ -155,9 +157,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              wakeUp: 'Mid-morning',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              wakeUp: valueOrDefault(
+                                  currentUserDocument?.wakeUp, ''),
                             ));
                           },
                           child: Container(
@@ -201,9 +205,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              wakeUp: 'Late',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              wakeUp: valueOrDefault(
+                                  currentUserDocument?.wakeUp, ''),
                             ));
                           },
                           child: Container(
@@ -266,9 +272,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              goToBed: 'Early',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              goToBed: valueOrDefault(
+                                  currentUserDocument?.goToBed, ''),
                             ));
                           },
                           child: Container(
@@ -312,9 +320,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              goToBed: 'Late',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              goToBed: valueOrDefault(
+                                  currentUserDocument?.goToBed, ''),
                             ));
                           },
                           child: Container(
@@ -384,9 +394,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              quietOrSocial: 'Quiet',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              quietOrSocial: valueOrDefault(
+                                  currentUserDocument?.quietOrSocial, ''),
                             ));
                           },
                           child: Container(
@@ -430,9 +442,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              quietOrSocial: 'Social',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              quietOrSocial: valueOrDefault(
+                                  currentUserDocument?.quietOrSocial, ''),
                             ));
                           },
                           child: Container(
@@ -502,9 +516,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              shareOrSeparate: 'Share',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              shareOrSeparate: valueOrDefault(
+                                  currentUserDocument?.shareOrSeparate, ''),
                             ));
                           },
                           child: Container(
@@ -548,9 +564,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              shareOrSeparate: 'Separate',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              shareOrSeparate: valueOrDefault(
+                                  currentUserDocument?.shareOrSeparate, ''),
                             ));
                           },
                           child: Container(
@@ -620,9 +638,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              pets: 'Yes',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              pets:
+                                  valueOrDefault(currentUserDocument?.pets, ''),
                             ));
                           },
                           child: Container(
@@ -666,9 +686,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              pets: 'No',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              pets:
+                                  valueOrDefault(currentUserDocument?.pets, ''),
                             ));
                           },
                           child: Container(
@@ -731,9 +753,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              allergies: 'Yes',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              allergies: valueOrDefault(
+                                  currentUserDocument?.allergies, ''),
                             ));
                           },
                           child: Container(
@@ -777,9 +801,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              allergies: 'No',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              allergies: valueOrDefault(
+                                  currentUserDocument?.allergies, ''),
                             ));
                           },
                           child: Container(
@@ -849,9 +875,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              quietSpace: 'Quiet Study',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              quietSpace: valueOrDefault(
+                                  currentUserDocument?.quietSpace, ''),
                             ));
                           },
                           child: Container(
@@ -895,9 +923,11 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
                             safeSetState(() {});
                             logFirebaseEvent('Container_backend_call');
 
-                            await currentUserReference!
-                                .update(createUsersRecordData(
-                              quietSpace: 'Noise Is Fine',
+                            await RoommatePrefRecord.createDoc(
+                                    currentUserReference!)
+                                .set(createRoommatePrefRecordData(
+                              quietSpace: valueOrDefault(
+                                  currentUserDocument?.quietSpace, ''),
                             ));
                           },
                           child: Container(
@@ -945,24 +975,6 @@ class _RoomiePreferencesWidgetState extends State<RoomiePreferencesWidget> {
 
                         context
                             .pushNamed(GeneralListingsStudentsWidget.routeName);
-
-                        logFirebaseEvent('Button_backend_call');
-
-                        await currentUserReference!
-                            .update(createUsersRecordData(
-                          allergies: '',
-                          goToBed:
-                              valueOrDefault(currentUserDocument?.goToBed, ''),
-                          pets: valueOrDefault(currentUserDocument?.pets, ''),
-                          quietOrSocial: valueOrDefault(
-                              currentUserDocument?.quietOrSocial, ''),
-                          quietSpace: valueOrDefault(
-                              currentUserDocument?.quietSpace, ''),
-                          shareOrSeparate: valueOrDefault(
-                              currentUserDocument?.shareOrSeparate, ''),
-                          wakeUp:
-                              valueOrDefault(currentUserDocument?.wakeUp, ''),
-                        ));
                       },
                       text: 'Complete',
                       options: FFButtonOptions(
