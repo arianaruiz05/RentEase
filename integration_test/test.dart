@@ -106,7 +106,7 @@ void main() async {
         find.byKey(const ValueKey('TextField_cz4m')), 'password');
     await tester.tap(find.byKey(const ValueKey('signupButton_ycpn')));
     await tester.pumpAndSettle(const Duration(milliseconds: 5000));
-    expect(find.text('Are you a student or landlord?'), findsWidgets);
+    expect(find.text('Student'), findsWidgets);
   });
 
   testWidgets('accountAlreadyExists', (WidgetTester tester) async {
