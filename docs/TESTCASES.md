@@ -1,7 +1,7 @@
 # Unit Test Design
 
 ## US1: User Account Creation
-
+[Test Case - RentEase](https://docs.google.com/presentation/d/1ZtezrmVTcIsV4F5Z6gsKgLs6MprWzYxOa16wtZIsbZE/edit?usp=sharing)
 
 
 ## US2: User Login
