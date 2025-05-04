@@ -10,6 +10,8 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'property_add_page_model.dart';
 export 'property_add_page_model.dart';
 
@@ -43,6 +45,12 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
 
     _model.propDescriptionTextController ??= TextEditingController();
     _model.propDescriptionFocusNode ??= FocusNode();
+
+    _model.nameLandlordTextController ??= TextEditingController();
+    _model.nameLandlordFocusNode ??= FocusNode();
+
+    _model.landlordNumberTextController ??= TextEditingController();
+    _model.landlordNumberFocusNode ??= FocusNode();
 
     _model.rentTextController ??= TextEditingController();
     _model.rentFocusNode ??= FocusNode();
@@ -101,9 +109,17 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                         'Add New Property',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Cardo',
+                                  font: GoogleFonts.cardo(
+                                    fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
                                 ),
                       ),
                     ]
@@ -125,9 +141,17 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                           'Property Photos',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Cardo',
+                                    font: GoogleFonts.cardo(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Container(
@@ -260,6 +284,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 ),
                                               ),
                                               child: Stack(
+                                                key: ValueKey('Stack_dw7y'),
                                                 children: [
                                                   Align(
                                                     alignment:
@@ -1722,11 +1747,28 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Cardo',
+                                              font: GoogleFonts.cardo(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
                                             ),
                                       ),
                                     ),
@@ -1740,9 +1782,17 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                           'Property Details',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Cardo',
+                                    font: GoogleFonts.cardo(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Container(
@@ -1764,6 +1814,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                 Container(
                                   width: double.infinity,
                                   child: TextFormField(
+                                    key: ValueKey('PropertyTitle_e2fz'),
                                     controller:
                                         _model.propertyTitleTextController,
                                     focusNode: _model.propertyTitleFocusNode,
@@ -1777,8 +1828,25 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Cardo',
+                                            font: GoogleFonts.cardo(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontStyle,
                                           ),
                                       hintText: 'e.g. 123 Main Street',
                                       enabledBorder: OutlineInputBorder(
@@ -1824,14 +1892,44 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Cardo',
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                     cursorColor:
                                         FlutterFlowTheme.of(context).primary,
                                     validator: _model
                                         .propertyTitleTextControllerValidator
                                         .asValidator(context),
+                                    inputFormatters: [
+                                      if (!isAndroid && !isiOS)
+                                        TextInputFormatter.withFunction(
+                                            (oldValue, newValue) {
+                                          return TextEditingValue(
+                                            selection: newValue.selection,
+                                            text: newValue.text
+                                                .toCapitalization(
+                                                    TextCapitalization
+                                                        .sentences),
+                                          );
+                                        }),
+                                    ],
                                   ),
                                 ),
                                 Container(),
@@ -1847,9 +1945,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -1857,6 +1967,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: FlutterFlowDropDown<String>(
+                                              key: ValueKey('PropType_doyy'),
                                               controller: _model
                                                       .propTypeValueController ??=
                                                   FormFieldController<String>(
@@ -1877,8 +1988,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               hintText: 'Select type',
                                               icon: Icon(
@@ -1918,9 +2050,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -1928,6 +2072,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: FlutterFlowDropDown<String>(
+                                              key: ValueKey('NumBeds_qjhl'),
                                               controller: _model
                                                       .numBedsValueController ??=
                                                   FormFieldController<String>(
@@ -1948,8 +2093,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               hintText: 'Select',
                                               icon: Icon(
@@ -1994,9 +2160,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -2004,6 +2182,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: FlutterFlowDropDown<String>(
+                                              key: ValueKey('NumBath_4htz'),
                                               controller: _model
                                                       .numBathValueController ??=
                                                   FormFieldController<String>(
@@ -2024,8 +2203,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               hintText: 'Select',
                                               icon: Icon(
@@ -2065,9 +2265,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -2075,6 +2287,8 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: TextFormField(
+                                              key: ValueKey(
+                                                  'SquareFootage_ztn8'),
                                               controller: _model
                                                   .squareFootageTextController,
                                               focusNode:
@@ -2141,8 +2355,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               keyboardType:
                                                   TextInputType.number,
@@ -2165,14 +2400,24 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Cardo',
+                                        font: GoogleFonts.cardo(
+                                          fontWeight: FontWeight.w500,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Container(
                                   width: double.infinity,
                                   child: TextFormField(
+                                    key: ValueKey('PropDescription_6q8u'),
                                     controller:
                                         _model.propDescriptionTextController,
                                     focusNode: _model.propDescriptionFocusNode,
@@ -2227,8 +2472,25 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Cardo',
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                     maxLines: 5,
                                     minLines: 5,
@@ -2238,6 +2500,261 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                     validator: _model
                                         .propDescriptionTextControllerValidator
                                         .asValidator(context),
+                                    inputFormatters: [
+                                      if (!isAndroid && !isiOS)
+                                        TextInputFormatter.withFunction(
+                                            (oldValue, newValue) {
+                                          return TextEditingValue(
+                                            selection: newValue.selection,
+                                            text: newValue.text
+                                                .toCapitalization(
+                                                    TextCapitalization
+                                                        .sentences),
+                                          );
+                                        }),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: double.infinity,
+                                  child: TextFormField(
+                                    key: ValueKey('nameLandlord_jm39'),
+                                    controller:
+                                        _model.nameLandlordTextController,
+                                    focusNode: _model.nameLandlordFocusNode,
+                                    autofocus: false,
+                                    textCapitalization:
+                                        TextCapitalization.sentences,
+                                    textInputAction: TextInputAction.next,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      labelText: 'Name',
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            font: GoogleFonts.cardo(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
+                                            ),
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontStyle,
+                                          ),
+                                      hintText: 'e.g. John Doe',
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      filled: true,
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                    cursorColor:
+                                        FlutterFlowTheme.of(context).primary,
+                                    validator: _model
+                                        .nameLandlordTextControllerValidator
+                                        .asValidator(context),
+                                    inputFormatters: [
+                                      if (!isAndroid && !isiOS)
+                                        TextInputFormatter.withFunction(
+                                            (oldValue, newValue) {
+                                          return TextEditingValue(
+                                            selection: newValue.selection,
+                                            text: newValue.text
+                                                .toCapitalization(
+                                                    TextCapitalization
+                                                        .sentences),
+                                          );
+                                        }),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: double.infinity,
+                                  child: TextFormField(
+                                    key: ValueKey('landlordNumber_q2ly'),
+                                    controller:
+                                        _model.landlordNumberTextController,
+                                    focusNode: _model.landlordNumberFocusNode,
+                                    autofocus: false,
+                                    textCapitalization:
+                                        TextCapitalization.sentences,
+                                    textInputAction: TextInputAction.next,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      labelText: 'Phone Number',
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .override(
+                                            font: GoogleFonts.cardo(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
+                                            ),
+                                            letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontStyle,
+                                          ),
+                                      hintText: 'e.g. (123) 456-7890',
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      filled: true,
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                    cursorColor:
+                                        FlutterFlowTheme.of(context).primary,
+                                    validator: _model
+                                        .landlordNumberTextControllerValidator
+                                        .asValidator(context),
+                                    inputFormatters: [
+                                      if (!isAndroid && !isiOS)
+                                        TextInputFormatter.withFunction(
+                                            (oldValue, newValue) {
+                                          return TextEditingValue(
+                                            selection: newValue.selection,
+                                            text: newValue.text
+                                                .toCapitalization(
+                                                    TextCapitalization
+                                                        .sentences),
+                                          );
+                                        }),
+                                    ],
                                   ),
                                 ),
                               ].divide(SizedBox(height: 16.0)),
@@ -2249,9 +2766,17 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                           'Amenities',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Cardo',
+                                    font: GoogleFonts.cardo(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         wrapWithModel(
@@ -2264,9 +2789,17 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                           'Pricing & Lease Terms',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Cardo',
+                                    font: GoogleFonts.cardo(
+                                      fontWeight: FontWeight.w600,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
                                   ),
                         ),
                         Container(
@@ -2297,9 +2830,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -2307,6 +2852,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: TextFormField(
+                                              key: ValueKey('Rent_qlkw'),
                                               controller:
                                                   _model.rentTextController,
                                               focusNode: _model.rentFocusNode,
@@ -2372,8 +2918,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               keyboardType:
                                                   TextInputType.number,
@@ -2398,9 +2965,21 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Cardo',
+                                                  font: GoogleFonts.cardo(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Padding(
@@ -2408,6 +2987,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: TextFormField(
+                                              key: ValueKey('Deposit_gbap'),
                                               controller:
                                                   _model.depositTextController,
                                               focusNode:
@@ -2418,7 +2998,9 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 enabledBorder:
                                                     OutlineInputBorder(
                                                   borderSide: BorderSide(
-                                                    color: Color(0x00000000),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .alternate,
                                                     width: 1.0,
                                                   ),
                                                   borderRadius:
@@ -2428,7 +3010,9 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 focusedBorder:
                                                     OutlineInputBorder(
                                                   borderSide: BorderSide(
-                                                    color: Color(0x00000000),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
                                                     width: 1.0,
                                                   ),
                                                   borderRadius:
@@ -2437,7 +3021,9 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 ),
                                                 errorBorder: OutlineInputBorder(
                                                   borderSide: BorderSide(
-                                                    color: Color(0x00000000),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .error,
                                                     width: 1.0,
                                                   ),
                                                   borderRadius:
@@ -2447,7 +3033,9 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
                                                   borderSide: BorderSide(
-                                                    color: Color(0x00000000),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .error,
                                                     width: 1.0,
                                                   ),
                                                   borderRadius:
@@ -2459,8 +3047,29 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Cardo',
+                                                        font: GoogleFonts.cardo(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               maxLines: null,
                                               validator: _model
@@ -2478,6 +3087,7 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                           ),
                         ),
                         FFButtonWidget(
+                          key: ValueKey('AddProperty_7d02'),
                           onPressed: () async {
                             logFirebaseEvent('PROPERTY_ADD_AddProperty_ON_TAP');
                             logFirebaseEvent('AddProperty_backend_call');
@@ -2502,11 +3112,19 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                                   propertyid: _model.propTypeValue,
                                   numBeds: _model.numBedsValue,
                                   numBath: _model.numBathValue,
+                                  landlordName:
+                                      _model.nameLandlordTextController.text,
+                                  landlordPhone:
+                                      _model.landlordNumberTextController.text,
                                 ));
                             logFirebaseEvent('AddProperty_navigate_to');
 
                             context.pushNamed(
                                 GeneralListingsLandlordsWidget.routeName);
+
+                            logFirebaseEvent(
+                                'AddProperty_google_analytics_event');
+                            logFirebaseEvent('');
                           },
                           text: 'Add Listing',
                           options: FFButtonOptions(
@@ -2520,9 +3138,22 @@ class _PropertyAddPageWidgetState extends State<PropertyAddPageWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Cardo',
+                                  font: GoogleFonts.cardo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                             elevation: 0.0,
                             borderRadius: BorderRadius.circular(8.0),

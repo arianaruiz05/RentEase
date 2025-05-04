@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -108,14 +109,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => OnboardingLandlordsWidget(),
         ),
         FFRoute(
-          name: RoomiePreferencesWidget.routeName,
-          path: RoomiePreferencesWidget.routePath,
-          builder: (context, params) => RoomiePreferencesWidget(),
-        ),
-        FFRoute(
-          name: ProfilePageWidget.routeName,
-          path: ProfilePageWidget.routePath,
-          builder: (context, params) => ProfilePageWidget(),
+          name: ProfilePageStudentWidget.routeName,
+          path: ProfilePageStudentWidget.routePath,
+          builder: (context, params) => ProfilePageStudentWidget(),
         ),
         FFRoute(
           name: OnboardingStudentWidget.routeName,
@@ -199,6 +195,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
             userProfile: params.getParam(
               'userProfile',
               ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: RoomiePreferencesWidget.routeName,
+          path: RoomiePreferencesWidget.routePath,
+          builder: (context, params) => RoomiePreferencesWidget(),
+        ),
+        FFRoute(
+          name: RoomInfoWidget.routeName,
+          path: RoomInfoWidget.routePath,
+          asyncParams: {
+            'roomieRecords': getDoc(['users'], UsersRecord.fromSnapshot),
+          },
+          builder: (context, params) => RoomInfoWidget(
+            roomieRecords: params.getParam(
+              'roomieRecords',
+              ParamType.Document,
             ),
           ),
         )

@@ -1,5 +1,6 @@
 import '/components/nav_bar_without_middle_button_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'roommate_listings_widget.dart' show RoommateListingsWidget;
 import 'package:flutter/material.dart';
 

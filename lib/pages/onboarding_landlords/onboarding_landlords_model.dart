@@ -24,6 +24,10 @@ class OnboardingLandlordsModel
   FocusNode? lLHometownFocusNode;
   TextEditingController? lLHometownTextController;
   String? Function(BuildContext, String?)? lLHometownTextControllerValidator;
+  // State field(s) for LLPhoneNumber widget.
+  FocusNode? lLPhoneNumberFocusNode;
+  TextEditingController? lLPhoneNumberTextController;
+  String? Function(BuildContext, String?)? lLPhoneNumberTextControllerValidator;
   // State field(s) for LLBio widget.
   FocusNode? lLBioFocusNode;
   TextEditingController? lLBioTextController;
@@ -42,6 +46,9 @@ class OnboardingLandlordsModel
 
     lLHometownFocusNode?.dispose();
     lLHometownTextController?.dispose();
+
+    lLPhoneNumberFocusNode?.dispose();
+    lLPhoneNumberTextController?.dispose();
 
     lLBioFocusNode?.dispose();
     lLBioTextController?.dispose();

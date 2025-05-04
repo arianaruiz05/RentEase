@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'messaging_model.dart';
 export 'messaging_model.dart';
 
@@ -114,8 +115,25 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Cardo',
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -153,8 +171,23 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Cardo',
+                                        font: GoogleFonts.cardo(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                   validator: _model.textControllerValidator
                                       .asValidator(context),
@@ -171,7 +204,8 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                     'MESSAGING_PAGE_Container_u3ikw3kx_ON_TAP');
                                 logFirebaseEvent('Container_navigate_to');
 
-                                context.pushNamed(ProfilePageWidget.routeName);
+                                context.pushNamed(
+                                    ProfilePageStudentWidget.routeName);
                               },
                               child: Container(
                                 width: 50.0,
@@ -215,8 +249,23 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Cardo',
+                                        font: GoogleFonts.cardo(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 InkWell(
@@ -244,8 +293,25 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Cardo',
+                                          font: GoogleFonts.cardo(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ),
@@ -449,6 +515,7 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                               snapshot.data!;
 
                                           return Container(
+                                            key: ValueKey('Container_gxjd'),
                                             width: 100.0,
                                             decoration: BoxDecoration(
                                               color:
@@ -677,9 +744,14 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                                                             return Text(
                                                                               textUsersRecord.displayName,
                                                                               style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                    fontFamily: 'Cardo',
+                                                                                    font: GoogleFonts.cardo(
+                                                                                      fontWeight: FlutterFlowTheme.of(context).bodyLarge.fontWeight,
+                                                                                      fontStyle: FlutterFlowTheme.of(context).bodyLarge.fontStyle,
+                                                                                    ),
                                                                                     fontSize: 16.0,
                                                                                     letterSpacing: 0.0,
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyLarge.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyLarge.fontStyle,
                                                                                   ),
                                                                             );
                                                                           },
@@ -693,9 +765,14 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyLarge
                                                                               .override(
-                                                                                fontFamily: 'Cardo',
+                                                                                font: GoogleFonts.cardo(
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyLarge.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyLarge.fontStyle,
+                                                                                ),
                                                                                 fontSize: 16.0,
                                                                                 letterSpacing: 0.0,
+                                                                                fontWeight: FlutterFlowTheme.of(context).bodyLarge.fontWeight,
+                                                                                fontStyle: FlutterFlowTheme.of(context).bodyLarge.fontStyle,
                                                                               ),
                                                                         ),
                                                                       Padding(
@@ -711,9 +788,14 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
-                                                                                fontFamily: 'Cardo',
+                                                                                font: GoogleFonts.cardo(
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                ),
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
                                                                                 letterSpacing: 0.0,
+                                                                                fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                               ),
                                                                         ),
                                                                       ),
@@ -751,10 +833,27 @@ class _MessagingWidgetState extends State<MessagingWidget> {
                                                                       .of(context)
                                                                   .bodySmall
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Cardo',
+                                                                    font: GoogleFonts
+                                                                        .cardo(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontStyle,
+                                                                    ),
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                             if (listViewChatsRecord

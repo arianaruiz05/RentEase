@@ -6,11 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const kThemeModeKey = '__theme_mode__';
+
 SharedPreferences? _prefs;
 
 abstract class FlutterFlowTheme {
   static Future initialize() async =>
       _prefs = await SharedPreferences.getInstance();
+
   static ThemeMode get themeMode {
     final darkMode = _prefs?.getBool(kThemeModeKey);
     return darkMode == null
@@ -182,120 +184,105 @@ class ThemeTypography extends Typography {
   final FlutterFlowTheme theme;
 
   String get displayLargeFamily => 'Cardo';
-  TextStyle get displayLarge => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get displayLarge => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
         fontStyle: FontStyle.normal,
       );
   String get displayMediumFamily => 'Cardo';
-  TextStyle get displayMedium => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get displayMedium => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 26.0,
         fontStyle: FontStyle.normal,
       );
   String get displaySmallFamily => 'Cardo';
-  TextStyle get displaySmall => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get displaySmall => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 20.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineLargeFamily => 'Cardo';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get headlineLarge => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineMediumFamily => 'Cardo';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get headlineMedium => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineSmallFamily => 'Cardo';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get headlineSmall => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
         fontStyle: FontStyle.normal,
       );
   String get titleLargeFamily => 'Cardo';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get titleLarge => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
   String get titleMediumFamily => 'Cardo';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get titleMedium => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
         fontSize: 14.0,
         fontStyle: FontStyle.normal,
       );
   String get titleSmallFamily => 'Cardo';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get titleSmall => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 13.0,
         fontStyle: FontStyle.normal,
       );
   String get labelLargeFamily => 'Cardo';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get labelLarge => GoogleFonts.cardo(
         color: theme.secondaryText,
         fontWeight: FontWeight.bold,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
   String get labelMediumFamily => 'Cardo';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get labelMedium => GoogleFonts.cardo(
         color: theme.secondaryText,
         fontWeight: FontWeight.bold,
         fontSize: 14.0,
         fontStyle: FontStyle.normal,
       );
   String get labelSmallFamily => 'Cardo';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get labelSmall => GoogleFonts.cardo(
         color: theme.secondaryText,
         fontWeight: FontWeight.bold,
         fontSize: 12.0,
         fontStyle: FontStyle.normal,
       );
   String get bodyLargeFamily => 'Cardo';
-  TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get bodyLarge => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
         fontStyle: FontStyle.normal,
       );
   String get bodyMediumFamily => 'Cardo';
-  TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get bodyMedium => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
         fontStyle: FontStyle.normal,
       );
   String get bodySmallFamily => 'Cardo';
-  TextStyle get bodySmall => GoogleFonts.getFont(
-        'Cardo',
+  TextStyle get bodySmall => GoogleFonts.cardo(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 10.0,
@@ -331,38 +318,45 @@ class DarkModeTheme extends FlutterFlowTheme {
 
 extension TextStyleHelper on TextStyle {
   TextStyle override({
+    TextStyle? font,
     String? fontFamily,
     Color? color,
     double? fontSize,
     FontWeight? fontWeight,
     double? letterSpacing,
     FontStyle? fontStyle,
-    bool useGoogleFonts = true,
+    bool useGoogleFonts = false,
     TextDecoration? decoration,
     double? lineHeight,
     List<Shadow>? shadows,
-  }) =>
-      useGoogleFonts
-          ? GoogleFonts.getFont(
-              fontFamily!,
-              color: color ?? this.color,
-              fontSize: fontSize ?? this.fontSize,
-              letterSpacing: letterSpacing ?? this.letterSpacing,
-              fontWeight: fontWeight ?? this.fontWeight,
-              fontStyle: fontStyle ?? this.fontStyle,
-              decoration: decoration,
-              height: lineHeight,
-              shadows: shadows,
-            )
-          : copyWith(
-              fontFamily: fontFamily,
-              color: color,
-              fontSize: fontSize,
-              letterSpacing: letterSpacing,
-              fontWeight: fontWeight,
-              fontStyle: fontStyle,
-              decoration: decoration,
-              height: lineHeight,
-              shadows: shadows,
-            );
+  }) {
+    if (useGoogleFonts && fontFamily != null) {
+      font = GoogleFonts.getFont(fontFamily,
+          fontWeight: fontWeight ?? this.fontWeight,
+          fontStyle: fontStyle ?? this.fontStyle);
+    }
+
+    return font != null
+        ? font.copyWith(
+            color: color ?? this.color,
+            fontSize: fontSize ?? this.fontSize,
+            letterSpacing: letterSpacing ?? this.letterSpacing,
+            fontWeight: fontWeight ?? this.fontWeight,
+            fontStyle: fontStyle ?? this.fontStyle,
+            decoration: decoration,
+            height: lineHeight,
+            shadows: shadows,
+          )
+        : copyWith(
+            fontFamily: fontFamily,
+            color: color,
+            fontSize: fontSize,
+            letterSpacing: letterSpacing,
+            fontWeight: fontWeight,
+            fontStyle: fontStyle,
+            decoration: decoration,
+            height: lineHeight,
+            shadows: shadows,
+          );
+  }
 }

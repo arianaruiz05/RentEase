@@ -105,10 +105,15 @@ class PropertiesRecord extends FirestoreRecord {
   DateTime? get createdTime => _createdTime;
   bool hasCreatedTime() => _createdTime != null;
 
-  // "phone_number" field.
-  String? _phoneNumber;
-  String get phoneNumber => _phoneNumber ?? '';
-  bool hasPhoneNumber() => _phoneNumber != null;
+  // "LandlordName" field.
+  String? _landlordName;
+  String get landlordName => _landlordName ?? '';
+  bool hasLandlordName() => _landlordName != null;
+
+  // "LandlordPhone" field.
+  String? _landlordPhone;
+  String get landlordPhone => _landlordPhone ?? '';
+  bool hasLandlordPhone() => _landlordPhone != null;
 
   void _initializeFields() {
     _address = snapshotData['address'] as String?;
@@ -129,7 +134,8 @@ class PropertiesRecord extends FirestoreRecord {
     _photoUrl = snapshotData['photo_url'] as String?;
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
-    _phoneNumber = snapshotData['phone_number'] as String?;
+    _landlordName = snapshotData['LandlordName'] as String?;
+    _landlordPhone = snapshotData['LandlordPhone'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -185,7 +191,8 @@ Map<String, dynamic> createPropertiesRecordData({
   String? photoUrl,
   String? uid,
   DateTime? createdTime,
-  String? phoneNumber,
+  String? landlordName,
+  String? landlordPhone,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -207,7 +214,8 @@ Map<String, dynamic> createPropertiesRecordData({
       'photo_url': photoUrl,
       'uid': uid,
       'created_time': createdTime,
-      'phone_number': phoneNumber,
+      'LandlordName': landlordName,
+      'LandlordPhone': landlordPhone,
     }.withoutNulls,
   );
 
@@ -237,7 +245,8 @@ class PropertiesRecordDocumentEquality implements Equality<PropertiesRecord> {
         e1?.photoUrl == e2?.photoUrl &&
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.landlordName == e2?.landlordName &&
+        e1?.landlordPhone == e2?.landlordPhone;
   }
 
   @override
@@ -260,7 +269,8 @@ class PropertiesRecordDocumentEquality implements Equality<PropertiesRecord> {
         e?.photoUrl,
         e?.uid,
         e?.createdTime,
-        e?.phoneNumber
+        e?.landlordName,
+        e?.landlordPhone
       ]);
 
   @override

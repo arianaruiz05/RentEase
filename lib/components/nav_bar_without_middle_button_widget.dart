@@ -132,7 +132,7 @@ class _NavBarWithoutMiddleButtonWidgetState
                         'NAV_BAR_WITHOUT_MIDDLE_BUTTON_settingsBu');
                     logFirebaseEvent('settingsButton_navigate_to');
 
-                    context.pushNamed(ProfilePageWidget.routeName);
+                    context.pushNamed(ProfilePageStudentWidget.routeName);
                   },
                 ),
                 FlutterFlowIconButton(

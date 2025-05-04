@@ -1,8 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/landlord_info_widget.dart';
 import '/components/nav_bar_with_middle_button_widget.dart';
 import '/components/survey_widget.dart';
+import '/flutter_flow/flutter_flow_ad_banner.dart';
 import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -13,6 +13,7 @@ import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'general_listings_landlords_model.dart';
@@ -132,6 +133,15 @@ class _GeneralListingsLandlordsWidgetState
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
+                        Align(
+                          alignment: AlignmentDirectional(0.0, -1.01),
+                          child: FlutterFlowAdBanner(
+                            height: 50.0,
+                            showsTestAd: false,
+                            androidAdUnitID:
+                                'ca-app-pub-3509219267112206/1525637955',
+                          ),
+                        ),
                         Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -214,10 +224,28 @@ class _GeneralListingsLandlordsWidgetState
                                                                   context)
                                                               .bodyMedium
                                                               .override(
-                                                                fontFamily:
-                                                                    'Cardo',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .cardo(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
                                                               ),
                                                       textHighlightStyle:
                                                           TextStyle(),
@@ -333,10 +361,28 @@ class _GeneralListingsLandlordsWidgetState
                                                                     context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Cardo',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .cardo(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
                                                                 ),
                                                         enabledBorder:
                                                             InputBorder.none,
@@ -347,13 +393,34 @@ class _GeneralListingsLandlordsWidgetState
                                                         focusedErrorBorder:
                                                             InputBorder.none,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily: 'Cardo',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .cardo(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
                                                       validator: _model
                                                           .textControllerValidator
                                                           .asValidator(context),
@@ -447,10 +514,10 @@ class _GeneralListingsLandlordsWidgetState
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         FlutterFlowChoiceChips(
+                                          key: ValueKey('ChoiceChips_g95c'),
                                           options: [
                                             ChipData('All'),
-                                            ChipData('New Listings'),
-                                            ChipData('Notifications')
+                                            ChipData('Messages\n')
                                           ],
                                           onChanged: (val) => safeSetState(() =>
                                               _model.choiceChipsValue =
@@ -463,12 +530,33 @@ class _GeneralListingsLandlordsWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Cardo',
+                                                      font: GoogleFonts.cardo(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
                                                     ),
                                             iconColor:
                                                 FlutterFlowTheme.of(context)
@@ -486,12 +574,33 @@ class _GeneralListingsLandlordsWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall
                                                     .override(
-                                                      fontFamily: 'Cardo',
+                                                      font: GoogleFonts.cardo(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .secondaryText,
                                                       letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
                                                     ),
                                             iconColor:
                                                 FlutterFlowTheme.of(context)
@@ -514,75 +623,6 @@ class _GeneralListingsLandlordsWidgetState
                                         ),
                                       ].divide(SizedBox(width: 8.0)),
                                     ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 8.0, 16.0, 8.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        _model.simpleSearchResults.length
-                                            .toString(),
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleMedium
-                                            .override(
-                                              fontFamily: 'Cardo',
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                      Text(
-                                        'Properties',
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleMedium
-                                            .override(
-                                              fontFamily: 'Cardo',
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          FlutterFlowIconButton(
-                                            borderRadius: 8.0,
-                                            buttonSize: 40.0,
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            icon: Icon(
-                                              Icons.filter_list,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              size: 20.0,
-                                            ),
-                                            onPressed: () {
-                                              print('IconButton pressed ...');
-                                            },
-                                          ),
-                                          FlutterFlowIconButton(
-                                            borderRadius: 8.0,
-                                            buttonSize: 40.0,
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            icon: Icon(
-                                              Icons.sort,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              size: 20.0,
-                                            ),
-                                            onPressed: () {
-                                              print('IconButton pressed ...');
-                                            },
-                                          ),
-                                        ].divide(SizedBox(width: 8.0)),
-                                      ),
-                                    ],
                                   ),
                                 ),
                                 if (!FFAppState().searchActive)
@@ -713,12 +753,19 @@ class _GeneralListingsLandlordsWidgetState
                                                                               context)
                                                                           .headlineSmall
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                            ),
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primary,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                           ),
                                                                     ),
                                                                     Text(
@@ -730,60 +777,82 @@ class _GeneralListingsLandlordsWidgetState
                                                                               context)
                                                                           .headlineSmall
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                            ),
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primary,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                           ),
                                                                     ),
-                                                                    Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      children:
-                                                                          [
-                                                                        Icon(
-                                                                          Icons
-                                                                              .star_rounded,
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).warning,
-                                                                          size:
-                                                                              20.0,
-                                                                        ),
-                                                                        Text(
-                                                                          '4.8',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Cardo',
-                                                                                letterSpacing: 0.0,
-                                                                              ),
-                                                                        ),
-                                                                      ].divide(SizedBox(
-                                                                              width: 4.0)),
-                                                                    ),
                                                                   ],
-                                                                ),
-                                                                Text(
-                                                                  propertiesNoSearchItem
-                                                                      .address,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Cardo',
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
                                                                 ),
                                                                 Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
                                                                           .max,
                                                                   children: [
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          8.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .location_on_outlined,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            20.0,
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                      propertiesNoSearchItem
+                                                                          .address,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                            ),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            letterSpacing:
+                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                          ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                Row(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  children: [
+                                                                    Icon(
+                                                                      Icons
+                                                                          .bed_outlined,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      size:
+                                                                          20.0,
+                                                                    ),
                                                                     Text(
                                                                       propertiesNoSearchItem
                                                                           .numBeds,
@@ -791,37 +860,19 @@ class _GeneralListingsLandlordsWidgetState
                                                                               context)
                                                                           .bodyMedium
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                            ),
+                                                                            fontSize:
+                                                                                14.0,
                                                                             letterSpacing:
                                                                                 0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .numBath,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .squareFootage
-                                                                          .toString(),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
-                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -835,125 +886,86 @@ class _GeneralListingsLandlordsWidgetState
                                                                   children: [
                                                                     Padding(
                                                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          4.0,
-                                                                          2.0,
-                                                                          4.0,
-                                                                          2.0),
+                                                                          0.0,
+                                                                          0.0,
+                                                                          10.0,
+                                                                          0.0),
                                                                       child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              Color(0x00183B6B),
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(4.0),
-                                                                        ),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            InkWell(
-                                                                              splashColor: Colors.transparent,
-                                                                              focusColor: Colors.transparent,
-                                                                              hoverColor: Colors.transparent,
-                                                                              highlightColor: Colors.transparent,
-                                                                              onTap: () async {
-                                                                                logFirebaseEvent('GENERAL_LISTINGS_LANDLORDS_Icon_e7n5tq9v');
-                                                                                logFirebaseEvent('Icon_bottom_sheet');
-                                                                                await showModalBottomSheet(
-                                                                                  isScrollControlled: true,
-                                                                                  backgroundColor: Colors.transparent,
-                                                                                  enableDrag: false,
-                                                                                  context: context,
-                                                                                  builder: (context) {
-                                                                                    return GestureDetector(
-                                                                                      onTap: () {
-                                                                                        FocusScope.of(context).unfocus();
-                                                                                        FocusManager.instance.primaryFocus?.unfocus();
-                                                                                      },
-                                                                                      child: Padding(
-                                                                                        padding: MediaQuery.viewInsetsOf(context),
-                                                                                        child: LandlordInfoWidget(),
-                                                                                      ),
-                                                                                    );
-                                                                                  },
-                                                                                ).then((value) => safeSetState(() {}));
-
-                                                                                logFirebaseEvent('Icon_update_app_state');
-                                                                                FFAppState().contactCount = FFAppState().contactCount + 1;
-                                                                                safeSetState(() {});
-                                                                                logFirebaseEvent('Icon_backend_call');
-
-                                                                                await SearchToContactRecord.createDoc(currentUserReference!).set(createSearchToContactRecordData(
-                                                                                  contactCount: _model.currentContactCount,
-                                                                                ));
-                                                                                logFirebaseEvent('Icon_google_analytics_event');
-                                                                                logFirebaseEvent('');
-                                                                              },
-                                                                              child: Icon(
-                                                                                Icons.contact_mail,
-                                                                                color: FlutterFlowTheme.of(context).primary,
-                                                                                size: 24.0,
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          4.0,
-                                                                          2.0,
-                                                                          4.0,
-                                                                          2.0),
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).accent4,
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(4.0),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          8.0)),
-                                                                ),
-                                                                Text(
-                                                                  propertiesNoSearchItem
-                                                                      .propertyDetails,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Cardo',
+                                                                          Icon(
+                                                                        Icons
+                                                                            .bathroom_outlined,
                                                                         color: FlutterFlowTheme.of(context)
-                                                                            .primary,
-                                                                        letterSpacing:
-                                                                            0.0,
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            20.0,
                                                                       ),
+                                                                    ),
+                                                                    Text(
+                                                                      propertiesNoSearchItem
+                                                                          .numBath,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                            ),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            letterSpacing:
+                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                          ),
+                                                                    ),
+                                                                  ],
                                                                 ),
                                                                 Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
                                                                           .max,
                                                                   children: [
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          8.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .square_foot_outlined,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            20.0,
+                                                                      ),
+                                                                    ),
                                                                     Text(
                                                                       propertiesNoSearchItem
-                                                                          .securityDeposits
+                                                                          .squareFootage
                                                                           .toString(),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyMedium
+                                                                          .headlineSmall
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                            ),
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primary,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                           ),
                                                                     ),
                                                                   ],
@@ -961,6 +973,133 @@ class _GeneralListingsLandlordsWidgetState
                                                               ].divide(SizedBox(
                                                                   height: 8.0)),
                                                             ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            4.0,
+                                                                            2.0,
+                                                                            4.0,
+                                                                            2.0),
+                                                                child:
+                                                                    Container(
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: Color(
+                                                                        0x00183B6B),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child: Row(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Icon(
+                                                                        Icons
+                                                                            .contact_mail,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primary,
+                                                                        size:
+                                                                            24.0,
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            4.0,
+                                                                            2.0,
+                                                                            4.0,
+                                                                            2.0),
+                                                                child:
+                                                                    Container(
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .accent4,
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            5.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  propertiesNoSearchItem
+                                                                      .landlordName,
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        font: GoogleFonts
+                                                                            .cardo(
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontStyle,
+                                                                        ),
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontStyle,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                propertiesNoSearchItem
+                                                                    .landlordPhone,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      font: GoogleFonts
+                                                                          .cardo(
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontStyle,
+                                                                      ),
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
+                                                              ),
+                                                            ].divide(SizedBox(
+                                                                width: 8.0)),
                                                           ),
                                                         ],
                                                       ),
@@ -1085,253 +1224,261 @@ class _GeneralListingsLandlordsWidgetState
                                                                   CrossAxisAlignment
                                                                       .start,
                                                               children: [
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .spaceBetween,
-                                                                  children: [
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .monthlyPrice
-                                                                          .toString(),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .headlineSmall
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem.available ==
-                                                                              true
-                                                                          ? 'Available'
-                                                                          : 'Unavailable',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .headlineSmall
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      children:
-                                                                          [
-                                                                        Icon(
-                                                                          Icons
-                                                                              .star_rounded,
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).warning,
-                                                                          size:
-                                                                              20.0,
-                                                                        ),
-                                                                        Text(
-                                                                          '4.8',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Cardo',
-                                                                                letterSpacing: 0.0,
-                                                                              ),
-                                                                        ),
-                                                                      ].divide(SizedBox(
-                                                                              width: 4.0)),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                                Text(
-                                                                  propertiesNoSearchItem
-                                                                      .address,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Cardo',
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
-                                                                ),
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .numBeds,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .numBath,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .squareFootage
-                                                                          .toString(),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                          ),
-                                                                    ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          10.0)),
-                                                                ),
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          4.0,
-                                                                          2.0,
-                                                                          4.0,
-                                                                          2.0),
-                                                                      child:
-                                                                          Container(
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              Color(0x00183B6B),
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(4.0),
-                                                                        ),
-                                                                        child:
-                                                                            InkWell(
-                                                                          splashColor:
-                                                                              Colors.transparent,
-                                                                          focusColor:
-                                                                              Colors.transparent,
-                                                                          hoverColor:
-                                                                              Colors.transparent,
-                                                                          highlightColor:
-                                                                              Colors.transparent,
-                                                                          onTap:
-                                                                              () async {
-                                                                            logFirebaseEvent('GENERAL_LISTINGS_LANDLORDS_Icon_nlts7f0p');
-                                                                            logFirebaseEvent('Icon_bottom_sheet');
-                                                                            await showModalBottomSheet(
-                                                                              isScrollControlled: true,
-                                                                              backgroundColor: Colors.transparent,
-                                                                              enableDrag: false,
-                                                                              context: context,
-                                                                              builder: (context) {
-                                                                                return GestureDetector(
-                                                                                  onTap: () {
-                                                                                    FocusScope.of(context).unfocus();
-                                                                                    FocusManager.instance.primaryFocus?.unfocus();
-                                                                                  },
-                                                                                  child: Padding(
-                                                                                    padding: MediaQuery.viewInsetsOf(context),
-                                                                                    child: LandlordInfoWidget(),
+                                                                Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          16.0,
+                                                                          16.0,
+                                                                          16.0),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .min,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.spaceBetween,
+                                                                        children: [
+                                                                          Text(
+                                                                            propertiesNoSearchItem.monthlyPrice.toString(),
+                                                                            style: FlutterFlowTheme.of(context).headlineSmall.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                                   ),
-                                                                                );
-                                                                              },
-                                                                            ).then((value) =>
-                                                                                safeSetState(() {}));
-
-                                                                            logFirebaseEvent('Icon_update_app_state');
-                                                                            FFAppState().contactCount =
-                                                                                FFAppState().contactCount + 1;
-                                                                            safeSetState(() {});
-                                                                            logFirebaseEvent('Icon_backend_call');
-
-                                                                            await SearchToContactRecord.createDoc(currentUserReference!).set(createSearchToContactRecordData(
-                                                                              contactCount: FFAppState().contactCount,
-                                                                            ));
-                                                                            logFirebaseEvent('Icon_google_analytics_event');
-                                                                            logFirebaseEvent('');
-                                                                          },
-                                                                          child:
-                                                                              Icon(
-                                                                            Icons.contact_mail,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            size:
-                                                                                24.0,
+                                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                ),
                                                                           ),
-                                                                        ),
+                                                                          Text(
+                                                                            propertiesNoSearchItem.available == true
+                                                                                ? 'Available'
+                                                                                : 'Unavailable',
+                                                                            style: FlutterFlowTheme.of(context).headlineSmall.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                  ),
+                                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ],
                                                                       ),
-                                                                    ),
-                                                                  ].divide(SizedBox(
-                                                                      width:
-                                                                          8.0)),
-                                                                ),
-                                                                Text(
-                                                                  propertiesNoSearchItem
-                                                                      .propertyDetails,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineSmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Cardo',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primary,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                      ),
-                                                                ),
-                                                                Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Text(
-                                                                      propertiesNoSearchItem
-                                                                          .securityDeposits
-                                                                          .toString(),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
-                                                                            letterSpacing:
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
+                                                                                0.0,
+                                                                                8.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Icon(
+                                                                              Icons.location_on_outlined,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 20.0,
+                                                                            ),
                                                                           ),
-                                                                    ),
-                                                                  ],
+                                                                          Text(
+                                                                            propertiesNoSearchItem.address,
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                  ),
+                                                                                  fontSize: 14.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children:
+                                                                            [
+                                                                          Icon(
+                                                                            Icons.bed_outlined,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).secondaryText,
+                                                                            size:
+                                                                                20.0,
+                                                                          ),
+                                                                          Text(
+                                                                            propertiesNoSearchItem.numBeds,
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                  ),
+                                                                                  fontSize: 14.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ].divide(SizedBox(width: 10.0)),
+                                                                      ),
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                0.0,
+                                                                                10.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Icon(
+                                                                              Icons.bathroom_outlined,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 20.0,
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            propertiesNoSearchItem.numBath,
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                  ),
+                                                                                  fontSize: 14.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                0.0,
+                                                                                8.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Icon(
+                                                                              Icons.square_foot_outlined,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 20.0,
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            propertiesNoSearchItem.squareFootage.toString(),
+                                                                            style: FlutterFlowTheme.of(context).headlineSmall.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                  ),
+                                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                      Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        children:
+                                                                            [
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                4.0,
+                                                                                2.0,
+                                                                                4.0,
+                                                                                2.0),
+                                                                            child:
+                                                                                Container(
+                                                                              decoration: BoxDecoration(
+                                                                                color: Color(0x00183B6B),
+                                                                                borderRadius: BorderRadius.circular(4.0),
+                                                                              ),
+                                                                              child: Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  Icon(
+                                                                                    Icons.contact_mail,
+                                                                                    color: FlutterFlowTheme.of(context).primary,
+                                                                                    size: 24.0,
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                4.0,
+                                                                                2.0,
+                                                                                4.0,
+                                                                                2.0),
+                                                                            child:
+                                                                                Container(
+                                                                              decoration: BoxDecoration(
+                                                                                color: FlutterFlowTheme.of(context).accent4,
+                                                                                borderRadius: BorderRadius.circular(4.0),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                0.0,
+                                                                                5.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              propertiesNoSearchItem.landlordName,
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    font: GoogleFonts.cardo(
+                                                                                      fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                      fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                    ),
+                                                                                    letterSpacing: 0.0,
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            propertiesNoSearchItem.landlordPhone,
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  font: GoogleFonts.cardo(
+                                                                                    fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                    fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                  ),
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                  fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                ),
+                                                                          ),
+                                                                        ].divide(SizedBox(width: 8.0)),
+                                                                      ),
+                                                                    ].divide(SizedBox(
+                                                                        height:
+                                                                            8.0)),
+                                                                  ),
                                                                 ),
                                                               ].divide(SizedBox(
                                                                   height: 8.0)),
@@ -1361,7 +1508,9 @@ class _GeneralListingsLandlordsWidgetState
                     child: wrapWithModel(
                       model: _model.navBarWithMiddleButtonModel,
                       updateCallback: () => safeSetState(() {}),
-                      child: NavBarWithMiddleButtonWidget(),
+                      child: NavBarWithMiddleButtonWidget(
+                        key: ValueKey('NavBarWithMiddleButton_ys03'),
+                      ),
                     ),
                   ),
                 ],

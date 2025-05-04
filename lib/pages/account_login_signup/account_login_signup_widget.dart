@@ -7,6 +7,7 @@ import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'account_login_signup_model.dart';
 export 'account_login_signup_model.dart';
 
@@ -39,6 +40,7 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
+
     _model.signupEmailTextController ??= TextEditingController();
     _model.signupEmailFocusNode ??= FocusNode();
 
@@ -123,27 +125,60 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                       child: TabBar(
                                         labelColor: FlutterFlowTheme.of(context)
                                             .primaryText,
-                                        unselectedLabelColor:
-                                            FlutterFlowTheme.of(context)
-                                                .secondaryText,
+                                        unselectedLabelColor: Color(0xFF3C586C),
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
-                                              fontFamily: 'Cardo',
+                                              font: GoogleFonts.cardo(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMedium
+                                                        .fontStyle,
+                                              ),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .fontStyle,
                                             ),
-                                        unselectedLabelStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Cardo',
-                                                  letterSpacing: 0.0,
-                                                ),
+                                        unselectedLabelStyle: FlutterFlowTheme
+                                                .of(context)
+                                            .titleMedium
+                                            .override(
+                                              font: GoogleFonts.cardo(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMedium
+                                                        .fontStyle,
+                                              ),
+                                              letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .fontStyle,
+                                            ),
                                         indicatorColor:
                                             FlutterFlowTheme.of(context)
                                                 .primary,
                                         tabs: [
                                           Tab(
+                                            key: ValueKey('SignupTab_9kj5'),
                                             text: 'Sign Up',
                                           ),
                                           Tab(
@@ -233,10 +268,17 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                               context)
                                                                           .labelMedium
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                            ),
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
                                                                           ),
                                                                       hintText:
                                                                           'Email...',
@@ -244,12 +286,17 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                               context)
                                                                           .labelMedium
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FontWeight.normal,
+                                                                              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                            ),
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             fontWeight:
                                                                                 FontWeight.normal,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
                                                                           ),
                                                                       enabledBorder:
                                                                           OutlineInputBorder(
@@ -324,10 +371,21 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                             context)
                                                                         .bodyMedium
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Cardo',
+                                                                          font:
+                                                                              GoogleFonts.cardo(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                          ),
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontStyle,
                                                                         ),
                                                                     cursorColor:
                                                                         FlutterFlowTheme.of(context)
@@ -374,10 +432,17 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                               context)
                                                                           .labelMedium
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                            ),
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
                                                                           ),
                                                                       hintText:
                                                                           'Password...',
@@ -385,12 +450,17 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                               context)
                                                                           .labelMedium
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Cardo',
+                                                                            font:
+                                                                                GoogleFonts.cardo(
+                                                                              fontWeight: FontWeight.normal,
+                                                                              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                            ),
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             fontWeight:
                                                                                 FontWeight.normal,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
                                                                           ),
                                                                       enabledBorder:
                                                                           OutlineInputBorder(
@@ -468,10 +538,21 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                             context)
                                                                         .bodyMedium
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Cardo',
+                                                                          font:
+                                                                              GoogleFonts.cardo(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                          ),
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontStyle,
                                                                         ),
                                                                     cursorColor:
                                                                         FlutterFlowTheme.of(context)
@@ -507,10 +588,21 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                             context)
                                                                         .labelMedium
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Cardo',
+                                                                          font:
+                                                                              GoogleFonts.cardo(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                          ),
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .fontStyle,
                                                                         ),
                                                                     hintText:
                                                                         'Confirm Password...',
@@ -518,12 +610,20 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                             context)
                                                                         .labelMedium
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Cardo',
+                                                                          font:
+                                                                              GoogleFonts.cardo(
+                                                                            fontWeight:
+                                                                                FontWeight.normal,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                                                                          ),
                                                                           letterSpacing:
                                                                               0.0,
                                                                           fontWeight:
                                                                               FontWeight.normal,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .fontStyle,
                                                                         ),
                                                                     enabledBorder:
                                                                         OutlineInputBorder(
@@ -606,10 +706,23 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
-                                                                        fontFamily:
-                                                                            'Cardo',
+                                                                        font: GoogleFonts
+                                                                            .cardo(
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontStyle,
+                                                                        ),
                                                                         letterSpacing:
                                                                             0.0,
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontStyle,
                                                                       ),
                                                                   cursorColor:
                                                                       FlutterFlowTheme.of(
@@ -681,10 +794,25 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                         context)
                                                                     .labelMedium
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Cardo',
+                                                                      font: GoogleFonts
+                                                                          .cardo(
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontStyle,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontStyle,
                                                                     ),
                                                             hintText:
                                                                 'Email...',
@@ -693,13 +821,23 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                         context)
                                                                     .labelMedium
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Cardo',
+                                                                      font: GoogleFonts
+                                                                          .cardo(
+                                                                        fontWeight:
+                                                                            FontWeight.normal,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontStyle,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .normal,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontStyle,
                                                                     ),
                                                             enabledBorder:
                                                                 OutlineInputBorder(
@@ -785,10 +923,28 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
-                                                                fontFamily:
-                                                                    'Cardo',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .cardo(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
                                                               ),
                                                           cursorColor:
                                                               FlutterFlowTheme.of(
@@ -829,10 +985,25 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                         context)
                                                                     .labelMedium
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Cardo',
+                                                                      font: GoogleFonts
+                                                                          .cardo(
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontStyle,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontStyle,
                                                                     ),
                                                             hintText:
                                                                 'Password...',
@@ -841,13 +1012,23 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                         context)
                                                                     .labelMedium
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Cardo',
+                                                                      font: GoogleFonts
+                                                                          .cardo(
+                                                                        fontWeight:
+                                                                            FontWeight.normal,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .fontStyle,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .normal,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .fontStyle,
                                                                     ),
                                                             enabledBorder:
                                                                 OutlineInputBorder(
@@ -933,10 +1114,28 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
-                                                                fontFamily:
-                                                                    'Cardo',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .cardo(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
                                                               ),
                                                           cursorColor:
                                                               FlutterFlowTheme.of(
@@ -967,11 +1166,24 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                       Align(
                         alignment: AlignmentDirectional(0.0, 1.0),
                         child: Text(
-                          'Sign up with Google or Facebook',
+                          'Sign up with Google',
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Cardo',
+                                    font: GoogleFonts.cardo(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
                                   ),
                         ),
                       ),
@@ -983,34 +1195,6 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            FFButtonWidget(
-                              onPressed: () {
-                                print('FacebookButton pressed ...');
-                              },
-                              text: '',
-                              icon: FaIcon(
-                                FontAwesomeIcons.facebook,
-                                size: 25.0,
-                              ),
-                              options: FFButtonOptions(
-                                width: 52.0,
-                                height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    8.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Cardo',
-                                      color: Colors.white,
-                                      letterSpacing: 0.0,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                            ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 30.0, 0.0),
@@ -1047,9 +1231,24 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        fontFamily: 'Cardo',
+                                        font: GoogleFonts.cardo(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .fontStyle,
+                                        ),
                                         color: Colors.white,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .fontStyle,
                                       ),
                                   elevation: 0.0,
                                   borderRadius: BorderRadius.circular(24.0),
@@ -1061,7 +1260,87 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                       ),
                       Stack(
                         children: [
-                          if (_model.tabBarCurrentIndex == 0)
+                          if (_model.tabBarPreviousIndex == 1)
+                            FFButtonWidget(
+                              key: ValueKey('loginButton_xqjb'),
+                              onPressed: () async {
+                                logFirebaseEvent(
+                                    'ACCOUNT_LOGIN_SIGNUP_loginButton_ON_TAP');
+                                logFirebaseEvent('loginButton_auth');
+                                GoRouter.of(context).prepareAuthEvent();
+
+                                final user = await authManager.signInWithEmail(
+                                  context,
+                                  _model.loginEmailTextController.text,
+                                  _model.loginPasswordTextController.text,
+                                );
+                                if (user == null) {
+                                  return;
+                                }
+
+                                logFirebaseEvent('loginButton_backend_call');
+
+                                await currentUserReference!.update({
+                                  ...mapToFirestore(
+                                    {
+                                      'UserLoginCount': FieldValue.increment(1),
+                                    },
+                                  ),
+                                });
+                                if (valueOrDefault<bool>(
+                                    currentUserDocument?.isStudent, false)) {
+                                  logFirebaseEvent('loginButton_navigate_to');
+
+                                  context.pushNamedAuth(
+                                      GeneralListingsStudentsWidget.routeName,
+                                      context.mounted);
+                                } else {
+                                  logFirebaseEvent('loginButton_navigate_to');
+
+                                  context.pushNamedAuth(
+                                      GeneralListingsLandlordsWidget.routeName,
+                                      context.mounted);
+                                }
+
+                                logFirebaseEvent(
+                                    'loginButton_google_analytics_event');
+                                logFirebaseEvent('');
+                              },
+                              text: 'Log in',
+                              options: FFButtonOptions(
+                                width: double.infinity,
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).primary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .override(
+                                      font: GoogleFonts.cardo(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
+                                      ),
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                elevation: 0.0,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ),
+                          if (_model.tabBarPreviousIndex == 0)
                             FFButtonWidget(
                               key: ValueKey('signupButton_ycpn'),
                               onPressed: () async {
@@ -1139,77 +1418,23 @@ class _AccountLoginSignupWidgetState extends State<AccountLoginSignupWidget>
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
-                                      fontFamily: 'Cardo',
+                                      font: GoogleFonts.cardo(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
+                                      ),
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       letterSpacing: 0.0,
-                                    ),
-                                elevation: 0.0,
-                                borderRadius: BorderRadius.circular(8.0),
-                              ),
-                            ),
-                          if (_model.tabBarCurrentIndex == 1)
-                            FFButtonWidget(
-                              key: ValueKey('loginButton_xqjb'),
-                              onPressed: () async {
-                                logFirebaseEvent(
-                                    'ACCOUNT_LOGIN_SIGNUP_loginButton_ON_TAP');
-                                logFirebaseEvent('loginButton_auth');
-                                GoRouter.of(context).prepareAuthEvent();
-
-                                final user = await authManager.signInWithEmail(
-                                  context,
-                                  _model.loginEmailTextController.text,
-                                  _model.loginPasswordTextController.text,
-                                );
-                                if (user == null) {
-                                  return;
-                                }
-
-                                logFirebaseEvent('loginButton_backend_call');
-
-                                await currentUserReference!.update({
-                                  ...mapToFirestore(
-                                    {
-                                      'UserLoginCount': FieldValue.increment(1),
-                                    },
-                                  ),
-                                });
-                                if (valueOrDefault<bool>(
-                                    currentUserDocument?.isStudent, false)) {
-                                  logFirebaseEvent('loginButton_navigate_to');
-
-                                  context.pushNamedAuth(
-                                      GeneralListingsStudentsWidget.routeName,
-                                      context.mounted);
-                                } else {
-                                  logFirebaseEvent('loginButton_navigate_to');
-
-                                  context.pushNamedAuth(
-                                      GeneralListingsLandlordsWidget.routeName,
-                                      context.mounted);
-                                }
-
-                                logFirebaseEvent(
-                                    'loginButton_google_analytics_event');
-                                logFirebaseEvent('');
-                              },
-                              text: 'Log in',
-                              options: FFButtonOptions(
-                                width: double.infinity,
-                                height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Cardo',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
                                     ),
                                 elevation: 0.0,
                                 borderRadius: BorderRadius.circular(8.0),

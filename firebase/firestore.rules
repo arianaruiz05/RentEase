@@ -11,14 +11,14 @@ service cloud.firestore {
     match /properties/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
-      allow delete: if false;
+      allow write: if true;
+      allow delete: if request.auth != null;
     }
 
     match /properties/{parent}/properties_amenaties/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
@@ -30,21 +30,21 @@ service cloud.firestore {
     match /surveyResponses/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /chats/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /chat_messages/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 

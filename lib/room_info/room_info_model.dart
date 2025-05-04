@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'landlord_info_widget.dart' show LandlordInfoWidget;
+import '/index.dart';
+import 'room_info_widget.dart' show RoomInfoWidget;
 import 'package:flutter/material.dart';
 
-class LandlordInfoModel extends FlutterFlowModel<LandlordInfoWidget> {
+class RoomInfoModel extends FlutterFlowModel<RoomInfoWidget> {
   @override
   void initState(BuildContext context) {}
 

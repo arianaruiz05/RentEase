@@ -81,6 +81,15 @@ class PropertyAddPageModel extends FlutterFlowModel<PropertyAddPageWidget> {
   TextEditingController? propDescriptionTextController;
   String? Function(BuildContext, String?)?
       propDescriptionTextControllerValidator;
+  // State field(s) for nameLandlord widget.
+  FocusNode? nameLandlordFocusNode;
+  TextEditingController? nameLandlordTextController;
+  String? Function(BuildContext, String?)? nameLandlordTextControllerValidator;
+  // State field(s) for landlordNumber widget.
+  FocusNode? landlordNumberFocusNode;
+  TextEditingController? landlordNumberTextController;
+  String? Function(BuildContext, String?)?
+      landlordNumberTextControllerValidator;
   // Model for amenities component.
   late AmenitiesModel amenitiesModel;
   // State field(s) for Rent widget.
@@ -107,6 +116,12 @@ class PropertyAddPageModel extends FlutterFlowModel<PropertyAddPageWidget> {
 
     propDescriptionFocusNode?.dispose();
     propDescriptionTextController?.dispose();
+
+    nameLandlordFocusNode?.dispose();
+    nameLandlordTextController?.dispose();
+
+    landlordNumberFocusNode?.dispose();
+    landlordNumberTextController?.dispose();
 
     amenitiesModel.dispose();
     rentFocusNode?.dispose();

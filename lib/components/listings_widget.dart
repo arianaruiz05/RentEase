@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'listings_model.dart';
 export 'listings_model.dart';
 
@@ -52,8 +53,18 @@ class _ListingsWidgetState extends State<ListingsWidget> {
               'Amenities',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Cardo',
+                    font: GoogleFonts.cardo(
+                      fontWeight: FlutterFlowTheme.of(context)
+                          .headlineMedium
+                          .fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                    ),
                     letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                   ),
             ),
           ),

@@ -140,6 +140,16 @@ class UsersRecord extends FirestoreRecord {
   bool get isRoommate => _isRoommate ?? false;
   bool hasIsRoommate() => _isRoommate != null;
 
+  // "user" field.
+  DocumentReference? _user;
+  DocumentReference? get user => _user;
+  bool hasUser() => _user != null;
+
+  // "landlordPhoneNumberOB" field.
+  String? _landlordPhoneNumberOB;
+  String get landlordPhoneNumberOB => _landlordPhoneNumberOB ?? '';
+  bool hasLandlordPhoneNumberOB() => _landlordPhoneNumberOB != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -166,6 +176,8 @@ class UsersRecord extends FirestoreRecord {
     _shareOrSeparate = snapshotData['shareOrSeparate'] as String?;
     _wakeUp = snapshotData['wakeUp'] as String?;
     _isRoommate = snapshotData['IsRoommate'] as bool?;
+    _user = snapshotData['user'] as DocumentReference?;
+    _landlordPhoneNumberOB = snapshotData['landlordPhoneNumberOB'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -227,6 +239,8 @@ Map<String, dynamic> createUsersRecordData({
   String? shareOrSeparate,
   String? wakeUp,
   bool? isRoommate,
+  DocumentReference? user,
+  String? landlordPhoneNumberOB,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -255,6 +269,8 @@ Map<String, dynamic> createUsersRecordData({
       'shareOrSeparate': shareOrSeparate,
       'wakeUp': wakeUp,
       'IsRoommate': isRoommate,
+      'user': user,
+      'landlordPhoneNumberOB': landlordPhoneNumberOB,
     }.withoutNulls,
   );
 
@@ -290,7 +306,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.quietSpace == e2?.quietSpace &&
         e1?.shareOrSeparate == e2?.shareOrSeparate &&
         e1?.wakeUp == e2?.wakeUp &&
-        e1?.isRoommate == e2?.isRoommate;
+        e1?.isRoommate == e2?.isRoommate &&
+        e1?.user == e2?.user &&
+        e1?.landlordPhoneNumberOB == e2?.landlordPhoneNumberOB;
   }
 
   @override
@@ -319,7 +337,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.quietSpace,
         e?.shareOrSeparate,
         e?.wakeUp,
-        e?.isRoommate
+        e?.isRoommate,
+        e?.user,
+        e?.landlordPhoneNumberOB
       ]);
 
   @override

@@ -4,9 +4,8 @@ export '/pages/account_login_signup/account_login_signup_widget.dart'
     show AccountLoginSignupWidget;
 export '/pages/onboarding_landlords/onboarding_landlords_widget.dart'
     show OnboardingLandlordsWidget;
-export '/pages/roomie_preferences/roomie_preferences_widget.dart'
-    show RoomiePreferencesWidget;
-export '/pages/profile_page/profile_page_widget.dart' show ProfilePageWidget;
+export '/pages/profile_page_student/profile_page_student_widget.dart'
+    show ProfilePageStudentWidget;
 export '/pages/onboarding_student/onboarding_student_widget.dart'
     show OnboardingStudentWidget;
 export '/pages/roommate/roommate_widget.dart' show RoommateWidget;
@@ -23,3 +22,6 @@ export '/pages/general_listings_students/general_listings_students_widget.dart'
     show GeneralListingsStudentsWidget;
 export '/active_users/active_users_widget.dart' show ActiveUsersWidget;
 export '/chats/chats_widget.dart' show ChatsWidget;
+export '/pages/roomie_preferences/roomie_preferences_widget.dart'
+    show RoomiePreferencesWidget;
+export '/room_info/room_info_widget.dart' show RoomInfoWidget;

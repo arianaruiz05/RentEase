@@ -130,6 +130,7 @@ class _NavBarWithMiddleButtonWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 20.0, 0.0, 0.0),
                     child: FlutterFlowIconButton(
+                      key: ValueKey('MiddleButton_teia'),
                       borderColor: Colors.transparent,
                       borderRadius: 4.0,
                       borderWidth: 1.0,

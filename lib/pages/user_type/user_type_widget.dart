@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'user_type_model.dart';
 export 'user_type_model.dart';
 
@@ -65,6 +66,7 @@ class _UserTypeWidgetState extends State<UserTypeWidget> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
+                    key: ValueKey('Image_zr8s'),
                     'assets/images/RentEase_(1).png',
                     width: 200.0,
                     height: 200.0,
@@ -76,8 +78,21 @@ class _UserTypeWidgetState extends State<UserTypeWidget> {
                   child: Text(
                     'Are you a student or landlord?',
                     style: FlutterFlowTheme.of(context).displayMedium.override(
-                          fontFamily: 'Cardo',
+                          font: GoogleFonts.cardo(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .displayMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .displayMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .displayMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .displayMedium
+                              .fontStyle,
                         ),
                   ),
                 ),
@@ -123,10 +138,23 @@ class _UserTypeWidgetState extends State<UserTypeWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleMedium.override(
-                                  fontFamily: 'Cardo',
+                                  font: GoogleFonts.cardo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
+                                  ),
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
@@ -171,10 +199,23 @@ class _UserTypeWidgetState extends State<UserTypeWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleMedium.override(
-                                  fontFamily: 'Cardo',
+                                  font: GoogleFonts.cardo(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
+                                  ),
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .fontStyle,
                                 ),
                         elevation: 0.0,
                         borderRadius: BorderRadius.circular(8.0),
