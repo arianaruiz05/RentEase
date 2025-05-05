@@ -784,8 +784,13 @@ class _GeneralListingsStudentsWidgetState
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
+                                                                              MainAxisAlignment.start,
                                                                           children: [
+                                                                            Icon(
+                                                                              Icons.attach_money,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 20.0,
+                                                                            ),
                                                                             Text(
                                                                               propertiesNoSearchItem.monthlyPrice.toString(),
                                                                               style: FlutterFlowTheme.of(context).headlineSmall.override(
@@ -799,18 +804,21 @@ class _GeneralListingsStudentsWidgetState
                                                                                     fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                                   ),
                                                                             ),
-                                                                            Text(
-                                                                              propertiesNoSearchItem.available == true ? 'Available' : 'Unavailable',
-                                                                              style: FlutterFlowTheme.of(context).headlineSmall.override(
-                                                                                    font: GoogleFonts.cardo(
+                                                                            Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(85.0, 0.0, 0.0, 0.0),
+                                                                              child: Text(
+                                                                                propertiesNoSearchItem.available == true ? 'Available' : 'Unavailable',
+                                                                                style: FlutterFlowTheme.of(context).headlineSmall.override(
+                                                                                      font: GoogleFonts.cardo(
+                                                                                        fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                        fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                                      ),
+                                                                                      color: FlutterFlowTheme.of(context).primary,
+                                                                                      letterSpacing: 0.0,
                                                                                       fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
                                                                                       fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                                     ),
-                                                                                    color: FlutterFlowTheme.of(context).primary,
-                                                                                    letterSpacing: 0.0,
-                                                                                    fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
-                                                                                    fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
-                                                                                  ),
+                                                                              ),
                                                                             ),
                                                                           ],
                                                                         ),
@@ -956,13 +964,30 @@ class _GeneralListingsStudentsWidgetState
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
-                                                                        Icon(
-                                                                          Icons
-                                                                              .contact_mail,
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primary,
-                                                                          size:
-                                                                              24.0,
+                                                                        InkWell(
+                                                                          splashColor:
+                                                                              Colors.transparent,
+                                                                          focusColor:
+                                                                              Colors.transparent,
+                                                                          hoverColor:
+                                                                              Colors.transparent,
+                                                                          highlightColor:
+                                                                              Colors.transparent,
+                                                                          onTap:
+                                                                              () async {
+                                                                            logFirebaseEvent('GENERAL_LISTINGS_STUDENTS_Icon_hxus1o1y_');
+                                                                            logFirebaseEvent('Icon_navigate_to');
+
+                                                                            context.pushNamed(MessagingWidget.routeName);
+                                                                          },
+                                                                          child:
+                                                                              Icon(
+                                                                            Icons.contact_mail,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                            size:
+                                                                                24.0,
+                                                                          ),
                                                                         ),
                                                                       ],
                                                                     ),

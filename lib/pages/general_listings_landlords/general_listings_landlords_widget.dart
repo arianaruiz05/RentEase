@@ -743,8 +743,17 @@ class _GeneralListingsLandlordsWidgetState
                                                                           .max,
                                                                   mainAxisAlignment:
                                                                       MainAxisAlignment
-                                                                          .spaceBetween,
+                                                                          .start,
                                                                   children: [
+                                                                    Icon(
+                                                                      Icons
+                                                                          .attach_money,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      size:
+                                                                          20.0,
+                                                                    ),
                                                                     Text(
                                                                       propertiesNoSearchItem
                                                                           .monthlyPrice
@@ -768,29 +777,31 @@ class _GeneralListingsLandlordsWidgetState
                                                                                 FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                           ),
                                                                     ),
-                                                                    Text(
-                                                                      propertiesNoSearchItem.available ==
-                                                                              true
-                                                                          ? 'Available'
-                                                                          : 'Unavailable',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .headlineSmall
-                                                                          .override(
-                                                                            font:
-                                                                                GoogleFonts.cardo(
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          85.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Text(
+                                                                        propertiesNoSearchItem.available ==
+                                                                                true
+                                                                            ? 'Available'
+                                                                            : 'Unavailable',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .headlineSmall
+                                                                            .override(
+                                                                              font: GoogleFonts.cardo(
+                                                                                fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
+                                                                                fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
+                                                                              ),
+                                                                              color: FlutterFlowTheme.of(context).primary,
+                                                                              letterSpacing: 0.0,
                                                                               fontWeight: FlutterFlowTheme.of(context).headlineSmall.fontWeight,
                                                                               fontStyle: FlutterFlowTheme.of(context).headlineSmall.fontStyle,
                                                                             ),
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                            fontWeight:
-                                                                                FlutterFlowTheme.of(context).headlineSmall.fontWeight,
-                                                                            fontStyle:
-                                                                                FlutterFlowTheme.of(context).headlineSmall.fontStyle,
-                                                                          ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
